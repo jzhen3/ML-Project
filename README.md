@@ -47,3 +47,5 @@ https://clipchamp.com/watch/qPwhHl32ECc
 https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription.
 
 https://www.sciencedirect.com/science/article/pii/S1877050922001107
+
+https://builtin.com/data-science/recommender-systems

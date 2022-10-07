@@ -43,7 +43,7 @@ Our group expects models can generate a similar result with the testing set, so 
 # Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 
-References:
+#References:
 https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription.
 
 https://www.sciencedirect.com/science/article/pii/S1877050922001107

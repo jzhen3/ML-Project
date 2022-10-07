@@ -29,7 +29,7 @@ We choose several matrixes to evaluate models’ performance. Firstly, we will c
 Our group expect models will higher recall rate (0.7) because we think False negative, which means the recommendation system does not predict what clients like to see. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account. 
 
 ## Unsupervised Methods:
-1. K-means
+1. GMM
 2. Hierarchical Clustering Algorithm
 
 ### Matrix for Unsupervised Methods: 

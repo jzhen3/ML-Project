@@ -14,10 +14,6 @@ A majority of us tend to like watching programming content with similar features
 Problem Definition:
 With rising demand of online subscription in online movies and TV shows, streaming services should better their recommendation systems. To retain their customers, streaming services usually release a wide variety of contents that meet the users’ satisfactions. Netflix started a fiction horror drama television series Stranger Things with excellent production team since 2016. However, each season is released once in a while. A subscription cancellation can result from the fact that when a user can’t find any other interesting to watch. Our objective is to reduce current challenges and apply popular machine learning algorithms to recommend tailored lists of movies or shows based on the common features of the users’ liked contents.  
 
-Jinsong's References:
-https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription.
-
-https://www.sciencedirect.com/science/article/pii/S1877050922001107
 
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:
@@ -46,3 +42,8 @@ we will chose four matrix to evaluate models' performance
 Our group expects models can generate a similar result with the testing set, so the homogeneity score and rand score should both be higher. And mutual info score should be relatively lower since clusters are expected to have high purity. Also, we expect Fowlkes mallows to score close to 1, which shows our prediction results are similar to the testing set. In addition, we also plan to use Euclidean Distance and Pearson Coefficient to calculate similarity between predictions and actual results. 
 # Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
+
+Jinsong's References:
+https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription.
+
+https://www.sciencedirect.com/science/article/pii/S1877050922001107

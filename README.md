@@ -25,7 +25,7 @@ With rising demand of online subscription in online movies and TV shows, streami
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
 ### Potential Results Discussion for Supervised Methods:
-Our group expect models will higher recall rate (0.7) because False negative means that the recommendation system does not predict what clients like to see. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account. 
+Our group expect models with higher recall rate (0.7) because False negative means that the recommendation system does not predict what clients like to watch. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account. 
 
 ## Unsupervised Methods:
 1. GMM

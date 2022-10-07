@@ -5,7 +5,8 @@ https://www.kaggle.com/datasets/shivamb/netflix-shows
 https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows   
 https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows   
 https://www.kaggle.com/datasets/shivamb/hulu-movies-and-tv-shows  
-https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json  
+https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json
+https://www.kaggle.com/datasets/darshan1504/imdb-movie-reviews-2021
 ____________________________________________________________________________________________________________________________________
 Introduction/Background:
 A majority of us tend to like watching programming content with similar features produced by the similar directors or casts. Since Bo Pang et al., in 2002, introduced the concept of emotional polarity classification, sentiment analysis on online reviews become more popular. It investigates subject texts involving users’ preferences and sentiment. We will leverage the classification and sentiment analysis to improve recommendation system and user experience. Our movies and TV shows datasets are featured with originate variables like title, cast, director, ratings, release year, country of production, etc. and extracted from Netflix, Amazon Prime Video, Disney Plus, and Hulu.  

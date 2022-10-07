@@ -20,7 +20,7 @@ https://www.sciencedirect.com/science/article/pii/S1877050922001107
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:
 1. Regression
-2. Tress-based method 
+2. Tree-based method 
 
 ### Matrix for Supervised Methods: 
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score

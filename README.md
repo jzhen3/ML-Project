@@ -26,7 +26,7 @@ https://www.sciencedirect.com/science/article/pii/S1877050922001107
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
 ### Potential Results Discussion for Supervised Methods:
-Our group expect models will higher recall rate (0.7) because we think False negative, which means the recommendation system does not predict what clients like to see. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account. But we want to use F-beta score adjusting because beta can show how much recall rate is more important than precision rate. For example, if we set beta = 2, it means that the recall is twice as important as precision. 
+Our group expect models will higher recall rate (0.7) because we think False negative, which means the recommendation system does not predict what clients like to see. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account. We want to use F-beta score adjusting because beta can show how much recall rate is more important than precision rate. For example, if we set beta = 2, it means that the recall is twice as important as precision. 
 
 ## Unsupervised Methods:
 1. K-means

@@ -13,8 +13,9 @@ Problem Definition:
 With rising demand of online subscription in online movies and TV shows, streaming services should better their recommendation systems. To retain their customers, streaming services usually release a wide variety of contents that meet the users’ satisfactions. Netflix started a science fiction horror drama television series Stranger Things with excellent production team since 2016. However, each season is released once in a while. A cancellation of subscription can result from the fact that when a user can’t find any other interesting to watch. Our objective is to reduce current challenges and apply popular machine learning algorithms to recommend tailored lists of movies or shows based on the common features of the users’ liked contents.  
 
 Jinsong's References:
+https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription.
 
-Zhang, Y. and Zhang, L. (2022). Movie Recommendation Algorithm Based on Sentiment Analysis and LDA. Procedia Computer Science, 199, pp.871–878. doi:10.1016/j.procs.2022.109
+https://www.sciencedirect.com/science/article/pii/S1877050922001107
 
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:
@@ -25,7 +26,7 @@ Zhang, Y. and Zhang, L. (2022). Movie Recommendation Algorithm Based on Sentimen
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
 ### Potential Results Discussion for Supervised Methods:
-Our group expect models will higher recall rate (0.7) because we think False negative, which means the recommendation system does not predict what clients like to see. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account but we want to use F-beta score adjusting beta can show how much think recall rate is more important than precision rate. For example, if we set beta = 2, it means that the recall is twice as important as precision. 
+Our group expect models will higher recall rate (0.7) because we think False negative, which means the recommendation system does not predict what clients like to see. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score consider both false positive and false negatives into account. But we want to use F-beta score adjusting beta can show how important recall rate is more important than precision rate. For example, if we set beta = 2, it means that the recall is twice as important as precision. 
 
 ## Unsupervised Methods:
 1. K-means

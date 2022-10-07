@@ -49,4 +49,4 @@ https://clipchamp.com/watch/qPwhHl32ECc
 
 [2] Zhang, Y., &amp; Zhang, L. (2022). Movie recommendation algorithm based on sentiment analysis and LDA. Procedia Computer Science, 199, 871–878. https://doi.org/10.1016/j.procs.2022.01.109 
 
-https://builtin.com/data-science/recommender-systems
+[3] Shetty, B. (2019, July 24). An In-Depth Guide to How Recommender Systems Work. Built In. Retrieved from https://builtin.com/data-science/recommender-systems 

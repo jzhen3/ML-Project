@@ -38,6 +38,7 @@ we will chose four matrix to evaluate models' performance
 2.	homogeneity_score
 3.	mutual_info_score
 4.	rand_score
+5.	Distance: Euclidean Distance, Pearson Coefficient
 
 ### Potential Results Discussion for Unsupervised Methods:
-Our group expects models can generate a similar result with the testing set, so the homogeneity score and rand score should both be higher. And mutual info score should be relatively lower since clusters are expected to have high purity. Also, we expect Fowlkes mallows to score close to 1, which shows our prediction results are similar to the testing set.
+Our group expects models can generate a similar result with the testing set, so the homogeneity score and rand score should both be higher. And mutual info score should be relatively lower since clusters are expected to have high purity. Also, we expect Fowlkes mallows to score close to 1, which shows our prediction results are similar to the testing set. In addition, we also plan to use Euclidean Distance and Pearson Coefficient to calculate similarity between predictions and actual results. 

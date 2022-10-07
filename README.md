@@ -13,9 +13,8 @@ Problem Definition:
 With rising demand of online subscription in online movies and TV shows, streaming services should better their recommendation systems. To retain their customers, streaming services usually release a wide variety of contents that meet the users’ satisfactions. Netflix started a science fiction horror drama television series Stranger Things with excellent production team since 2016. However, each season is released once in a while. A cancellation of subscription can result from the fact that when a user can’t find any other interesting to watch. Our objective is to reduce current challenges and apply popular machine learning algorithms to recommend tailored lists of movies or shows based on the common features of the users’ liked contents.  
 
 Jinsong's References:
-https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription.
 
-https://www.sciencedirect.com/science/article/pii/S1877050922001107
+Zhang, Y. and Zhang, L. (2022). Movie Recommendation Algorithm Based on Sentiment Analysis and LDA. Procedia Computer Science, 199, pp.871–878. doi:10.1016/j.procs.2022.109
 
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:

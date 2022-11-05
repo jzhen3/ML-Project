@@ -9,10 +9,14 @@ https://www.kaggle.com/datasets/shivamb/hulu-movies-and-tv-shows
 https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json
 https://www.kaggle.com/datasets/darshan1504/imdb-movie-reviews-2021
 ____________________________________________________________________________________________________________________________________
-Introduction/Background:
+# Introduction/Background:
 A majority of us like watching programming content with similar features produced by similar directors or casts. Since Bo Pang et al., in 2002, introduced the concept of emotional polarity classification, sentiment analysis on online reviews become more popular. It investigates subject texts involving users’ preferences and sentiment. We will leverage the classification and sentiment analysis to improve recommendation system and user experience. Our movies and TV shows datasets include originate variables like title, cast, director, ratings, release year, country of production, etc. These datasets are from Netflix, Amazon Prime Video, Disney Plus, and Hulu.
 
-Problem Definition:
+## Updata
+
+
+
+# Problem Definition:
  With rising demand for movies and TV shows subscription , streaming services should better their recommendation systems. Streaming services usually release a wide variety of contents that meet the users’ satisfactions to boost retention rate. Netflix started a fictional horror drama television series, Stranger Things, with excellent production team since 2016. However, each season is released once in a while. A subscription cancellation can result from the fact that when a user can’t find any other interesting to watch. Our goal is to reduce current challenges and apply popular machine learning algorithms to recommend lists of movies and shows based on the features of the users’ liked contents.
 
 

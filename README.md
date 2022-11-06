@@ -14,8 +14,7 @@ A majority of us like watching programming content with similar features produce
 
 ## Updata
 
-Unlike traditional commercial model that consumers find what they want in stores, today's commercial website will help users discover new product and services via using recommendation system. It not only benefits websites from selling their products, but also prevent consumers from overwhelming by too many options of products. Schafer, J.B., Konstan, J.A., & Riedl, J. (2004) analyzed 6 websites that lead 2004 market: 1. Amazon.com, CDNOW, Drugstore.com, eBay, MovieFinder.com and Reel.com. Even though they are targeting different industry, their recommendation system all relies on information from both items or users, particularly rely on consumers' rating to products or services.
-
+Unlike traditional commerical model that consumers find what they want in stores, today's commercial website will help users discover new product and services via using recommendation system. It not only benefits websits from selling their products, but also prevent consumers from overwhelming by too many options of products. Schafer, J.B., Konstan, J.A., & Riedl, J. (2004) analyzed 6 websites that lead 2004 market: 1. Amazon.com, CDNOW, Drugstore.com, eBay, MovieFinder.com and Reel.com. Even though they are targeting different industry, their recommendation system all rely on information from both items or users, particularly rely on consumers' rating to products or services. Roy, D., Dutta, M. (2022) categorized recommender systems into three different types: 1. content-based recommender systems, 2. collaborative recommender systems, 3. hybrid recommender systems. 
 
 # Problem Definition:
  With rising demand for movies and TV shows subscription , streaming services should better their recommendation systems. Streaming services usually release a wide variety of contents that meet the users’ satisfactions to boost retention rate. Netflix started a fictional horror drama television series, Stranger Things, with excellent production team since 2016. However, each season is released once in a while. A subscription cancellation can result from the fact that when a user can’t find any other interesting to watch. Our goal is to reduce current challenges and apply popular machine learning algorithms to recommend lists of movies and shows based on the features of the users’ liked contents.
@@ -61,4 +60,5 @@ https://clipchamp.com/watch/qPwhHl32ECc
 
 ## Updata
 [1] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5
+
 [2] Schafer, J.B., Konstan, J.A., & Riedl, J. (2004). E-Commerce Recommendation Applications. Data Mining and Knowledge Discovery, 5, 115-153.

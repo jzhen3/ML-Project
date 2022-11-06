@@ -14,7 +14,7 @@ A majority of us like watching programming content with similar features produce
 
 ## Updata
 
-Unlike traditional commerical model that consumers find what they want in stores, today's commercial website will help users discover new product and services via using recommendation system. It not only benefits websits from selling their products, but also prevent consumers from overwhelming by too many options of products. Most common examples of recommendation system include, Netflix that recommend films or shows,  YouTube that recommends videos and Spotify that recommend music. Most of recommendation system rely on information from both items or users....(More)
+Unlike traditional commercial model that consumers find what they want in stores, today's commercial website will help users discover new product and services via using recommendation system. It not only benefits websites from selling their products, but also prevent consumers from overwhelming by too many options of products. Schafer, J.B., Konstan, J.A., & Riedl, J. (2004) analyzed 6 websites that lead 2004 market: 1. Amazon.com, CDNOW, Drugstore.com, eBay, MovieFinder.com and Reel.com. Even though they are targeting different industry, their recommendation system all relies on information from both items or users, particularly rely on consumers' rating to products or services.
 
 
 # Problem Definition:
@@ -58,3 +58,7 @@ https://clipchamp.com/watch/qPwhHl32ECc
 [2] Zhang, Y., &amp; Zhang, L. (2022). Movie recommendation algorithm based on sentiment analysis and LDA. Procedia Computer Science, 199, 871–878. https://doi.org/10.1016/j.procs.2022.01.109 
 
 [3] Shetty, B. (2019, July 24). An In-Depth Guide to How Recommender Systems Work. Built In. Retrieved from https://builtin.com/data-science/recommender-systems 
+
+## Updata
+[1] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5
+[2] Schafer, J.B., Konstan, J.A., & Riedl, J. (2004). E-Commerce Recommendation Applications. Data Mining and Knowledge Discovery, 5, 115-153.

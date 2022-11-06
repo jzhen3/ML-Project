@@ -14,10 +14,13 @@ A majority of us like watching programming content with similar features produce
 
 ## Updata
 
+Unlike traditional commerical model that consumers find what they want in stores, today's commercial website will help users discover new product and services via using recommendation system. It not only benefits websits from selling their products, but also prevent consumers from overwhelming by too many options of products. Most common examples of recommendation system include, Netflix that recommend films or shows,  YouTube that recommends videos and Spotify that recommend music. Most of recommendation system rely on information from both items or users....(More)
 
 
 # Problem Definition:
  With rising demand for movies and TV shows subscription , streaming services should better their recommendation systems. Streaming services usually release a wide variety of contents that meet the users’ satisfactions to boost retention rate. Netflix started a fictional horror drama television series, Stranger Things, with excellent production team since 2016. However, each season is released once in a while. A subscription cancellation can result from the fact that when a user can’t find any other interesting to watch. Our goal is to reduce current challenges and apply popular machine learning algorithms to recommend lists of movies and shows based on the features of the users’ liked contents.
+
+## Updata: Data Collection:
 
 
 # Methods, Matrixes and Potential Results Discussion
@@ -32,8 +35,9 @@ We choose several matrixes to evaluate models’ performance. Firstly, we will c
 Our group expect models with higher recall rate (0.7) because False negative means that the recommendation system does not predict what clients like to watch. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score take into account of both false positive and false negative.
 
 ## Unsupervised Methods:
-1. GMM
-2. Hierarchical Clustering Algorithm
+1. Hierarchical Clustering Algorithm
+2. Principle Component Analysis
+3. Collaborative filtering
 
 ### Matrix for Unsupervised Methods: 
 we will choose four matrixes to evaluate the models' performance

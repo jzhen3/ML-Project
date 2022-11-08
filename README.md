@@ -10,27 +10,27 @@ https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json
 https://www.kaggle.com/datasets/darshan1504/imdb-movie-reviews-2021
 ____________________________________________________________________________________________________________________________________
 # Introduction/Background:
-A majority of us like watching programming content with similar features produced by similar directors or casts. Since Bo Pang et al., in 2002, introduced the concept of emotional polarity classification, sentiment analysis on online reviews become more popular. It investigates subject texts involving users’ preferences and sentiment. We will leverage the classification and sentiment analysis to improve recommendation system and user experience. Our movies and TV shows datasets include originate variables like title, cast, director, ratings, release year, country of production, etc. These datasets are from Netflix, Amazon Prime Video, Disney Plus, and Hulu.
+A majority of us like watching programming content with similar features produced by similar directors or casts. Since Bo Pang and Lillian Lee, a current research scientist at Google, introduced the concept of emotional polarity classification [3] and marked an official start of the systematic researach in this field. Sentiment analysis on online reviews become more popular. It investigates subject texts involving users’ preferences and sentiment. We will leverage the classification and sentiment analysis to improve recommendation system and user experience. Our movies and TV shows datasets include originate variables like title, cast, director, ratings, release year, country of production, etc. These datasets are from Netflix, Amazon Prime Video, Disney Plus, and Hulu.
 
-## Updata
+## Update
 
-Unlike the traditional commercial model that consumers find what they want in stores, today's commercial website will help users discover new products and services via using a recommendation system. It not only benefits websites from selling their products but also prevents consumers from overwhelming by too many options of products. Schafer, J.B., Konstan, J.A., & Riedl, J. (2004) analyzed 6 websites that lead the 2004 market: 1. Amazon.com, CDNOW, Drugstore.com, eBay, MovieFinder.com, and Reel.com. Even though they are targeting different industries, their recommendation system relies on information from both items or users, particularly relying on consumers' ratings of products or services. Roy, D., Dutta, M. (2022) categorized recommender systems into three different types: 1. content-based recommender systems, 2. collaborative recommender systems, and 3. hybrid recommender systems. In collaborative recommender systems, this system uses users' features to recommend. The collaborative recommender systems work based on the similarity between users. The hybrid recommender system combines two or more techniques and uses them all at once to overcome the shortcomings of each separate recommender technique. We gather two datasets for the project: one has users' rating of movies and another one have detailed information about films. They shared the same film name, so we will merge them together in the future. 
+Unlike the traditional commercial model that consumers find what they want in stores, today's commercial website will help users discover new products and services via using a recommendation system. It not only benefits websites from selling their products but also prevents consumers from being overwhemlmed by too many options of products. Schafer, J.B., Konstan, J.A., & Riedl, J. (2004) analyzed 6 websites that lead the 2004 market: 1. Amazon.com, CDNOW, Drugstore.com, eBay, MovieFinder.com, and Reel.com. Even though they are targeting different industries, their recommendation system relies on information from both items or users, particularly relying on consumers' ratings of products or services. Roy, D., Dutta, M. (2022) categorized recommender systems into three different types: 1. content-based recommender systems, 2. collaborative recommender systems, and 3. hybrid recommender systems. In collaborative recommender systems, this system uses users' features to recommend. The collaborative recommender systems work based on the similarity between users. The hybrid recommender system combines two or more techniques and uses them all at once to overcome the shortcomings of each separate recommender technique. We gather two datasets for the project: one has users' rating of movies and another one have detailed information about films. They shared the same film name, so we will merge them in the future. 
 
 # Problem Definition:
 With rising demand for movies and TV shows subscription , streaming services should better their recommendation systems. Streaming services usually release a wide variety of contents that meet the users’ satisfactions to boost retention rate. Netflix started a fictional horror drama television series, Stranger Things, with excellent production team since 2016. However, each season is released once in a while. A subscription cancellation can result from the fact that when a user can’t find any other interesting to watch. Our goal is to reduce current challenges and apply popular machine learning algorithms to recommend lists of movies and shows based on the features of the users’ liked contents. 
 
-## Updata
-The goal of this project is to predict and recommend what films the user may like via building a Films Recommendation System. With the prevalence of online services, more and more people can review and rating films so a significant amount of information about films is created. Audients have to spend so much time searching film information to decide if they want to watch the film. This project is important to work on because it can help consumers save time form searching for information on films or other services. Also, if film companies, like Netflix, can recommend films also be benefit from the system by developing more potential customers and their potential purchasing power.
+## Update
+The goal of this project is to predict and recommend what films the user may like via building a Films Recommendation System. With the prevalence of online services, more and more people can review and rating films so a significant amount of information about films are created. Audients have to spend so much time searching film information to decide if they want to watch the film. This project is important to work on because it can help consumers save time from searching for information on films or other services. Also, if film companies, like Netflix, can recommend films also be benefit from the system by developing more potential customers and their potential purchasing power.
 
 ## Updata: Data Collection:
-We extract films' gener from a dictionary and convert each of gener into a dummary variables. 
+We extract films' genres from a dictionary and convert each of genre into a dummary variables. 
 
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:
 1. Regression
 2. Tree-based method 
 
-### Matrix for Supervised Methods: 
+### Matrix for Supervised Methods:
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
 ### Potential Results Discussion for Supervised Methods:
@@ -40,6 +40,7 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 1. Hierarchical Clustering Algorithm
 2. Principle Component Analysis
 3. Collaborative filtering
+4. DBSCAN
 
 ### Matrix for Unsupervised Methods: 
 we will choose four matrixes to evaluate the models' performance
@@ -57,9 +58,11 @@ https://clipchamp.com/watch/qPwhHl32ECc
 # References:
 [1] Kumar, P. (n.d.). How Netflix uses data for customer retention. Sigma Magic. Retrieved from https://www.sigmamagic.com/blogs/netflix-data-analysis/#:~:text=One%2Dway%20Netflix%20uses%20to,end%20up%20cancelling%20the%20subscription
 
-[2] Zhang, Y., &amp; Zhang, L. (2022). Movie recommendation algorithm based on sentiment analysis and LDA. Procedia Computer Science, 199, 871–878. https://doi.org/10.1016/j.procs.2022.01.109 
+[2] Zhang, Y., &amp; Zhang, L. (2022). Movie recommendation algorithm based on sentiment analysis and LDA. Procedia Computer Science, 199, 871–878. https://doi.org/10.1016/j.procs.2022.01.109
 
-[3] Shetty, B. (2019, July 24). An In-Depth Guide to How Recommender Systems Work. Built In. Retrieved from https://builtin.com/data-science/recommender-systems 
+[3] Pang, B. (2002). Thumbs up? sentiment classiﬁcation using machine ... - cornell university. Proceedings of EMNLP 2002, pp. 79–86. Retrieved from https://www.cs.cornell.edu/home/llee/papers/sentiment.pdf
+
+[4] Shetty, B. (2019, July 24). An In-Depth Guide to How Recommender Systems Work. Built In. Retrieved from https://builtin.com/data-science/recommender-systems 
 
 ## Updata
 [1] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5

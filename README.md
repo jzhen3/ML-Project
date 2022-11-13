@@ -74,6 +74,26 @@ mark up: <details>
            <summary>"linkage type = ward"</summary>
            <p>linkge type is ward, number of cluster from 10 to 200</p>
          </details>
+         
+![Screenshot](complete.png "linkage type = complete") 
+
+mark up: <details>
+           <summary>"linkage type = complete"</summary>
+           <p>linkge type is complete, number of cluster from 10 to 200</p>
+         </details>
+![Screenshot](average.png "linkage type = average") 
+
+mark up: <details>
+           <summary>"linkage type = average"</summary>
+           <p>linkge type is average, number of cluster from 10 to 200</p>
+         </details>
+
+![Screenshot](single.png "linkage type = single") 
+
+mark up: <details>
+           <summary>"linkage type = single"</summary>
+           <p>linkge type is single, number of cluster from 10 to 200</p>
+         </details>
 
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc

@@ -58,7 +58,7 @@ numer of movies in cluster 1: [193]
 
 ![Screenshot](alice.png) ![Screenshot](land.png) ![Screenshot](balto.png) ![Screenshot](pocahontas.png)
 
-an axample with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, but there are way mroe movies in one cluster so we have more to recomend to the users.
+an axample with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way mroe movies in one cluster so we have more to recomend to the users.
 
 cluster 1: ['Screamers', 'Crumb', 'Judge Dredd', 'Species', 'Strange Days', 'Hoop Dreams', "Mary Shelley's Frankenstein", 'Outbreak', 'Jurassic Park',...]
 

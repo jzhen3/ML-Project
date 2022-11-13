@@ -49,8 +49,11 @@ we will choose four matrixes to evaluate the models' performance
 4.	rand_score
 5.	distance: Euclidean Distance, Pearson Coefficient
 
-### Potential Results Discussion for Unsupervised Methods:
-Our group expects models can generate a similar result with the testing set, so the homogeneity score and rand score should both be higher. And mutual info score should be relatively lower since clusters are expected to have high purity. Also, we expect Fowlkes mallows to score close to 1, which shows our prediction results are similar to the testing set. In addition, we also plan to use Euclidean Distance and Pearson Coefficient to calculate similarity between predictions and actual results. 
+### Results Discussion for Hierarchical Clustering Algorithm:
+Our group tested hierarchical clustering with all different settings, this includes four linkage type: ward, complete, average, and single linkage, and different connectivity constrains. Since we don’t have a true label for our data, so we runed silhouette coefficient to analysis the coherence of our clusters. In our testing, the linkage type ward performs the best with a silhouette coefficient around zero point five. It reaches the best performance around a hundred and ten clusters, within the same clusters movies often have three exactly same genres and similar runtime.
+cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before Time III: The Time of the Great Giving', 'Alice in Wonderland', 'The Fox and the Hound', 'Aladdin and the King of Thieves',...]
+numer of movies in cluster 1: [193]
+![alt text](https://github.com/dazeia-hub/CS7641-Proposal/balto.png?raw=true)
 # Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 

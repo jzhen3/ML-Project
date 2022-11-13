@@ -50,13 +50,21 @@ we will choose four matrixes to evaluate the models' performance
 5.	distance: Euclidean Distance, Pearson Coefficient
 
 ### Results Discussion for Hierarchical Clustering Algorithm:
-Our group tested hierarchical clustering with all different settings, this includes four linkage type: ward, complete, average, and single linkage, and different connectivity constrains. Since we don’t have a true label for our data, so we runed silhouette coefficient to analysis the coherence of our clusters. In our testing, the linkage type ward performs the best with a silhouette coefficient around zero point five. It reaches the best performance around a hundred and ten clusters, within the same clusters movies often have three exactly same genres and similar runtime. below is an example cluster for silhouette coefficient around zero point five.
+Our group tested hierarchical clustering with all different settings, this includes four linkage type: ward, complete, average, and single linkage, and different connectivity constrains. Since we don’t have a true label for our data, so we runed silhouette coefficient to analysis the coherence of our clusters. In our testing, the linkage type ward performs the best with a silhouette coefficient around zero point five. It reaches the best performance around a hundred and ten clusters, within the same clusters movies often have two to three exactly same genres and similar runtime. below is an example cluster for silhouette coefficient around 0.5.
 
 cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before Time III: The Time of the Great Giving', 'Alice in Wonderland', 'The Fox and the Hound', 'Aladdin and the King of Thieves',...]
 
 numer of movies in cluster 1: [193]
 
 ![Screenshot](alice.png) ![Screenshot](land.png) ![Screenshot](balto.png) ![Screenshot](pocahontas.png)
+
+an axample with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, but there are way mroe movies in one cluster so we have more to recomend to the users.
+
+cluster 1: ['Screamers', 'Crumb', 'Judge Dredd', 'Species', 'Strange Days', 'Hoop Dreams', "Mary Shelley's Frankenstein", 'Outbreak', 'Jurassic Park',...]
+
+numer of movies in cluster 1: [1237]
+
+![Screenshot](species.png) ![Screenshot](jurasic.png) ![Screenshot](scream.png)
 
 # Video link:
 https://clipchamp.com/watch/qPwhHl32ECc

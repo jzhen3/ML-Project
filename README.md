@@ -68,7 +68,7 @@ numer of movies in cluster 1: [1237]
 
 A quick comparison between different linkage setting.
 
-![Screenshot](scream.png "linkage type = ward")
+![Screenshot](ward.png "linkage type = ward")
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 

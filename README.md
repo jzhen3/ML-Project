@@ -95,6 +95,7 @@ mark up: <details>
            <p>linkge type is single, number of cluster from 10 to 200</p>
          </details>
 
+comparing all different kind of linkage types, ward minimized the sum of squared differences within all cluster, it is a variance-minimizing approach and provide best result among all four types of linkage. other types of linkage provide a small even negative silhouette coefficient which indicates some movies are in the wrong cluster, so for Hierarchical Clustering Algorithm we choose ward linkage to be the best solution for it.
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 

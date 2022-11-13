@@ -56,7 +56,7 @@ cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before 
 
 numer of movies in cluster 1: [193]
 
-![Screenshot](balto.png)
+![Screenshot](balto.png) ![Screenshot](alice.png) ![Screenshot](pocahontas.png)
 
 # Video link:
 https://clipchamp.com/watch/qPwhHl32ECc

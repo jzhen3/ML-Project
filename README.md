@@ -66,6 +66,9 @@ numer of movies in cluster 1: [1237]
 
 ![Screenshot](species.png) ![Screenshot](jurasic.png) ![Screenshot](scream.png)
 
+A quick comparison between different linkage setting.
+
+![Screenshot](scream.png "linkage type = ward")
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 

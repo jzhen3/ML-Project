@@ -68,7 +68,12 @@ numer of movies in cluster 1: [1237]
 
 A quick comparison between different linkage setting.
 
-![Screenshot](ward.png "linkage type = ward") linkage type = ward
+![Screenshot](ward.png "linkage type = ward") 
+
+Markup : <details>
+           <summary>"linkage type = ward"</summary>
+           <p>linkge type is ward, number of cluster from 10 to 200</p>
+         </details>
 
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc

@@ -36,6 +36,7 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 1. Hierarchical Clustering Algorithm 
 2. K-Prototypes
 3. DBSCAN
+4. K-Means
 
 ### Matrix for Unsupervised Methods: 
 we will choose four matrixes to evaluate the models' performance

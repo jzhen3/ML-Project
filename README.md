@@ -52,7 +52,7 @@ cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before 
 
 number of movies in cluster 1: [193]
 
-![Screenshot](alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
+![Screenshot](images/alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
 
 an example with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way more movies in one cluster so we have more to recomend to the users.
 

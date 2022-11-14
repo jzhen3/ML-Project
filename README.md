@@ -52,7 +52,7 @@ cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before 
 
 number of movies in cluster 1: [193]
 
-![Screenshot](alice.png) ![Screenshot](land.png) ![Screenshot](balto.png) ![Screenshot](pocahontas.png)
+![Screenshot](alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
 
 an example with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way more movies in one cluster so we have more to recomend to the users.
 
@@ -60,11 +60,11 @@ cluster 1: ['Screamers', 'Crumb', 'Judge Dredd', 'Species', 'Strange Days', 'Hoo
 
 number of movies in cluster 1: [1237]
 
-![Screenshot](species.png) ![Screenshot](jurasic.png) ![Screenshot](scream.png)
+![Screenshot](images/species.png) ![Screenshot](images/jurasic.png) ![Screenshot](images/scream.png)
 
 A quick comparison between different linkage setting.
 
-![Screenshot](ward.png "linkage type = ward") 
+![Screenshot](images/ward.png "linkage type = ward") 
 
 mark up: <details>
            <summary>"linkage type = ward"</summary>
@@ -77,14 +77,14 @@ mark up: <details>
            <summary>"linkage type = complete"</summary>
            <p>linkge type is complete, number of cluster from 10 to 200</p>
          </details>
-![Screenshot](average.png "linkage type = average") 
+![Screenshot](images/average.png "linkage type = average") 
 
 mark up: <details>
            <summary>"linkage type = average"</summary>
            <p>linkge type is average, number of cluster from 10 to 200</p>
          </details>
 
-![Screenshot](single.png "linkage type = single") 
+![Screenshot](images/single.png "linkage type = single") 
 
 mark up: <details>
            <summary>"linkage type = single"</summary>
@@ -110,13 +110,13 @@ Thus, the optimal number of cluster is 33 * 2 = 66 for our movie data set. By pr
 
 k-mean is a simple but popular unsupervised machine learning algorithms, as the first algorithm we learned in class we gave it a try as well. For K-mean, each observation belongs to the cluter wit hthe nearest mean, k-means clustering minimizes within-cluster vcariances, as the result, the k-mean algorithm returns a great coefficient.
 
-![Screenshot](kmean.png) 
+![Screenshot](images/kmean.png) 
 
 but there is one problem burried under it, although the silhouette coefficient is high, but the number of movies in each cluster is not evenly distributed compared to Hierarchical Clustering. 
 
-![Screenshot](number.png) 
+![Screenshot](images/number.png) 
 
-![Screenshot](type.png) 
+![Screenshot](images/type.png) 
 
 Out speculation is that due to the nature of this data set(genres are not evenly distributed) and K-mean, when a movie only have two genres or less, it gets clustered with other movie with only one same genre, Our result reflect this too, the top three clusters are movies with drama, comedy and thriller, when a movie consist this genre and only another one genre, it gets clustered with three biggest clusters. we are still working on how to further break these big clusters apart, K-ProtoType might be one soulution to this problem.
 

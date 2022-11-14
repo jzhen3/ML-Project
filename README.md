@@ -38,8 +38,8 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 3. DBSCAN
 4. K-Means
 
-### Metrics for Unsupervised Methods: 
-we will choose one metric to evaluate the models' performance
+### Matrix for Unsupervised Methods: 
+we will choose one matrix to evaluate the models' performance
 1.	Silhouette Coefficient
 
 ### Results Discussion for Hierarchical Clustering Algorithm:
@@ -127,7 +127,7 @@ https://clipchamp.com/watch/qPwhHl32ECc
 |---|---|
 |Siyuan Chen | test and tunning for Hierarchical Clustering Algorithm, data processing and visualization|
 |Dihong Huang| clean data and test K-prototype Algorithm|
-|Jinsong Zhen| Apply DBSCAN techniques, write result dicussions, collaborate with Zongzhen for the Introduction/Background and Problem Definition|
+|Jinsong Zhen| Apply DBSCAN techniques, write result dicussions, collaborate with Zongzhen for the Introduction/Background and Problem Definition, and assit with data collection and visualization|
 |Zongzhen Lin| lead and coordinated the group to achieve the midterm report; working on Introduction/Background, Problem Definition, Data collection, K-Prototype|
 
 # References:

@@ -121,6 +121,7 @@ https://clipchamp.com/watch/qPwhHl32ECc
 
 # Comtribution Table:
 [1] Siyuan Chen: test and tunning for Hierarchical Clustering Algorithm, data processing and visualization
+[2] Dihong Huang: clean data and test K-prototype Algorithm
 
 [2] Zongzhen Lin: lead and coordinated the group to achieve the midterm report; working on Introduction/Background, Problem Definition, Data collection, K-Prototype
 

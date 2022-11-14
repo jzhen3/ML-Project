@@ -120,8 +120,9 @@ Out speculation is that due to the nature of this data set(genres are not evenly
 https://clipchamp.com/watch/qPwhHl32ECc
 
 # Comtribution Table:
-Siyuan Chen: test and tunning for Hierarchical Clustering Algorithm, data processing and visualization
-Zongzhen Lin: lead and coordinated the group to achieve the midterm report; working on Introduction/Background, Problem Definition, Data collection, K-Prototype
+[1] Siyuan Chen: test and tunning for Hierarchical Clustering Algorithm, data processing and visualization
+
+[2] Zongzhen Lin: lead and coordinated the group to achieve the midterm report; working on Introduction/Background, Problem Definition, Data collection, K-Prototype
 
 # References:
 [1] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5

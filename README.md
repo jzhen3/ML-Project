@@ -96,7 +96,7 @@ comparing all different kind of linkage types, ward minimized the sum of squared
 
 ### Results Discussion for K-ProtoType:
 
-K-mean is used for numerical data, and k-mode is only suitable for categorical data types; in our case, we have mix types of data, so we used the K-protoType algorithm to do the clustering.
+K-mean is used for numerical data, and k-mode is only suitable for categorical data types; in our case, we have mix types of data, so we used the K-protoType algorithm to do the clustering. This method is proposed by Huang, Z. (1997). 
 
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
@@ -118,3 +118,5 @@ https://clipchamp.com/watch/qPwhHl32ECc
 [3] Jayalakshmi S, Ganesh N, Čep R, Senthil Murugan J. Movie Recommender Systems: Concepts, Methods, Challenges, and Future Directions. Sensors (Basel). 2022 Jun 29;22(13):4904. doi: 10.3390/s22134904. PMID: 35808398; PMCID: PMC9269752.
 
 [4] IMDB website at https://www.imdb.com/ to help team find detail information about movies
+
+[5] (1, 2) Huang, Z.: Clustering large data sets with mixed numeric and categorical values, Proceedings of the First Pacific Asia Knowledge Discovery and Data Mining Conference, Singapore, pp. 21-34, 1997.

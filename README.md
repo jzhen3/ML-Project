@@ -38,8 +38,8 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 3. DBSCAN
 4. K-Means
 
-### Matrix for Unsupervised Methods: 
-we will choose one matrix to evaluate the models' performance
+### Metrics for Unsupervised Methods: 
+we will choose one metric to evaluate the models' performance
 1.	Silhouette Coefficient
 
 ### Results Discussion for Hierarchical Clustering Algorithm:

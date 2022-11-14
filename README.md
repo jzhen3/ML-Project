@@ -71,7 +71,7 @@ mark up: <details>
            <p>linkge type is ward, number of cluster from 10 to 200</p>
          </details>
          
-![Screenshot](complete.png "linkage type = complete") 
+![Screenshot](images/complete.png "linkage type = complete") 
 
 mark up: <details>
            <summary>"linkage type = complete"</summary>

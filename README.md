@@ -39,11 +39,7 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 
 ### Matrix for Unsupervised Methods: 
 we will choose four matrixes to evaluate the models' performance
-1.	fowlkes_mallows_score
-2.	homogeneity_score
-3.	mutual_info_score
-4.	rand_score
-5.	distance: Euclidean Distance, Pearson Coefficient
+1.	
 
 ### Results Discussion for Hierarchical Clustering Algorithm:
 Our group tested hierarchical clustering with all different settings, this includes four linkage type: ward, complete, average, and single linkage, and different connectivity constrains. Since we don’t have a true label for our data, so we runed silhouette coefficient to analysis the coherence of our clusters. In our testing, the linkage type ward performs the best with a silhouette coefficient around zero point five. It reaches the best performance around a hundred and ten clusters, within the same clusters movies often have two to three exactly same genres and similar runtime. below is an example cluster for silhouette coefficient around 0.5. [pictures from IMDB website]
@@ -125,6 +121,7 @@ https://clipchamp.com/watch/qPwhHl32ECc
 
 # Comtribution Table:
 Siyuan Chen: test and tunning for Hierarchical Clustering Algorithm, data processing and visualization
+Zongzhen Lin: lead and coordinated the group to achieve the midterm report; working on Introduction/Background, Problem Definition, Data collection, K-Prototype
 
 # References:
 [1] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5

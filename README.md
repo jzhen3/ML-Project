@@ -1,13 +1,10 @@
 # CS7641-Midterm Report
 Proposal for CS7641 project
 ____________________________________________________________________________________________________________________________________
-# Dataset:
-https://www.kaggle.com/datasets/shivamb/netflix-shows  
-https://www.kaggle.com/datasets/shivamb/amazon-prime-movies-and-tv-shows   
-https://www.kaggle.com/datasets/shivamb/disney-movies-and-tv-shows   
-https://www.kaggle.com/datasets/shivamb/hulu-movies-and-tv-shows  
-https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json
-https://www.kaggle.com/datasets/darshan1504/imdb-movie-reviews-2021
+# Dataset: 
+[1] https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json
+
+[2] https://www.kaggle.com/datasets/darshan1504/imdb-movie-reviews-2021
 ____________________________________________________________________________________________________________________________________
 # Introduction/Background:
 Unlike the traditional commercial model that consumers find what they want in stores, today's commercial website will help users discover new products and services via using a recommendation system. It not only benefits websites from selling their products but also prevents consumers from being overwhemlmed by too many options of products. Schafer, J.B., Konstan, J.A., & Riedl, J. (2004) analyzed 6 websites that lead the 2004 market: 1. Amazon.com, CDNOW, Drugstore.com, eBay, MovieFinder.com, and Reel.com. Even though they are targeting different industries, their recommendation system relies on information from both items or users, particularly relying on consumers' ratings of products or services. Roy, D., Dutta, M. (2022) categorized recommender systems into three different types: 1. content-based recommender systems, 2. collaborative recommender systems, and 3. hybrid recommender systems. In collaborative recommender systems, this system uses users' features to recommend. The collaborative recommender systems work based on the similarity between users. The hybrid recommender system combines two or more techniques and uses them all at once to overcome the shortcomings of each separate recommender technique. We gather two datasets for the project: one has users' rating of movies and another one have detailed information about films. They shared the same film name, so we will merge them in the future. As Jayalakshmi S, Ganesh N, Čep R, Senthil Murugan J. (2022) mentioned,  an excellent films recommendation system will make recommendations for films that most closely match the similarities.

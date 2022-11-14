@@ -35,7 +35,7 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 3. Collaborative filtering
 4. DBSCAN
 
-## Updata Method that we already used:
+## Updata Method that we already tried:
 1. K-means
 2. K-Prototypes
 3. Hierarchical Clustering Algorithm 
@@ -54,15 +54,15 @@ Our group tested hierarchical clustering with all different settings, this inclu
 
 cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before Time III: The Time of the Great Giving', 'Alice in Wonderland', 'The Fox and the Hound', 'Aladdin and the King of Thieves',...]
 
-numer of movies in cluster 1: [193]
+number of movies in cluster 1: [193]
 
 ![Screenshot](alice.png) ![Screenshot](land.png) ![Screenshot](balto.png) ![Screenshot](pocahontas.png)
 
-an axample with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way mroe movies in one cluster so we have more to recomend to the users.
+an example with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way mroe movies in one cluster so we have more to recomend to the users.
 
 cluster 1: ['Screamers', 'Crumb', 'Judge Dredd', 'Species', 'Strange Days', 'Hoop Dreams', "Mary Shelley's Frankenstein", 'Outbreak', 'Jurassic Park',...]
 
-numer of movies in cluster 1: [1237]
+number of movies in cluster 1: [1237]
 
 ![Screenshot](species.png) ![Screenshot](jurasic.png) ![Screenshot](scream.png)
 

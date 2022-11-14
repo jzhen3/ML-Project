@@ -98,6 +98,8 @@ comparing all different kind of linkage types, ward minimized the sum of squared
 
 K-mean is used for numerical data, and k-mode is only suitable for categorical data types; in our case, we have mix types of data, so we used the K-protoType algorithm to do the clustering. This method is proposed by Huang, Z. (1997). 
 
+
+
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 

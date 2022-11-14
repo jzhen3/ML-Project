@@ -33,10 +33,9 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 4. DBSCAN
 
 ## Update Method that we already tried:
-1. K-means
+1. Hierarchical Clustering Algorithm 
 2. K-Prototypes
-3. Hierarchical Clustering Algorithm 
-4. DBSCAN
+3. DBSCAN
 
 ### Matrix for Unsupervised Methods: 
 we will choose four matrixes to evaluate the models' performance

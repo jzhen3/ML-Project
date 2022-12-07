@@ -96,7 +96,22 @@ The third algorithm is KNNBaseline, a KNN-based model including baseline ratings
 
 <img width="966" alt="knncv" src="https://user-images.githubusercontent.com/112134575/206160999-854a4c11-8caa-472e-85e6-2c622b78c30d.png">
 
-In terms of train rmse, we can see that SVD++ is the best, then SVD, KNNBaseline, and simple SVD follow. However, SVD++ doesn't significantly outperform SVD -- with only 0.002  
+In terms of train rmse, we can see that SVD++ is the best, then SVD, KNNBaseline, and simple SVD follow. While SVD++ doesn't significantly outperform SVD on test set -- with only a 0.0022 difference, KNNBaseline has much higher rmse on test that it actually underperforms SVD when generalizing to out of sample data. After such comparison, we implement several functions to see how the actual predictions of a specific user look like.
+
+We use the respective best parameter sets for SVD, SVD++, and KNNBaseline to create a prediction on a user with id 75. Movies are ranked based on estimated ratings. The top 10 movies for user 75 recommended by SVD are shown below:
+
+<img width="393" alt="svdtopname" src="https://user-images.githubusercontent.com/112134575/206163416-02841154-f535-4b56-ac75-ce9dae44918d.png">
+
+The top 10 movies for user 75 recommended by SVD++:
+
+<img width="474" alt="svdpptop" src="https://user-images.githubusercontent.com/112134575/206164099-6c168bbc-1505-4b5d-ab33-f54cb5ccb589.png">
+
+The top 10 movies for user 75 recommended by KNNBaseline:
+
+<img width="412" alt="knnbtop" src="https://user-images.githubusercontent.com/112134575/206164251-9ea7fc01-798c-4520-b67b-eca0f20d35a6.png">
+
+
+
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

@@ -29,9 +29,9 @@ Currently we have two kinds of datasets, one consisting of user comments and the
 5. KNN
 
 ### Matrix for Supervised Methods:
-We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
+We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and then calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
-## Updata 
+## Update
 We use MSE, RMSE, Accuracy
 
 ### Potential Results Discussion for Supervised Methods:
@@ -47,6 +47,8 @@ We build a correlation matrix to visiualize each feastures' association to predi
 
 From the histogram, we observe that most of the rating concentrate between 3.0 to 4.0 on average. This means that most users tend to rate films relatively tolerant since they rarely give films extremely low scores. Of course, an extremely high score does not appear frequently. 
 ![Screenshot](images/RateingCount.png)
+
+### Results Discussion for :
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

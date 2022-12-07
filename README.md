@@ -124,7 +124,18 @@ KNNBaseline
 
 <img width="363" alt="knnbc" src="https://user-images.githubusercontent.com/112134575/206166926-afc4c972-af63-4877-a49d-aed0631c340b.png">
 
+### Results Discussion for user specific MLP, decition tree, Naive bayes:
 
+During the implementation of supervised learning with MLP, decision tree and naïve bayas. There are a lot of result worth discussing. In my previous opinion that result with higher rmse will result in lower accuracy, this is true for the most part. How ever since our movie recommendation system is predicting the score that viewer will give to the movie, the accuracy can not fully represent the result. So, my idea is to mark the rating with 7 or higher as liked movie, and 6 or lower as dislike. Then do the same thing for result, it turns out that even MLP with sgd as the solve has the higher rmse but comparing predict result and actual label. The accuracy is higher for MLP with sgd. Follow by it is Gaussian Naïve bayas and decision tree classification. Decision tree regressor has the lowest rmse but give a slightly worse result of 64.4% accuracy, MLP with sgd and fine-tuned hyperparameters can return a accuracy as high as 67.54%. To guess the reason behind it, I would say it is because when predicting, MLP guess the higher score very high and lower answer very lower, thus lead to this result. 
+
+![image](https://user-images.githubusercontent.com/98988843/206115362-eff7c9f6-bb76-4b71-9701-071163d38051.png)
+
+something worth notice is that when running supervised test on different users, the accuracy of all methods varies, for example, user one would have higher accuracy on all method than user two. 
+
+![image](https://user-images.githubusercontent.com/98988843/206115410-fba0b4c6-846e-42f9-bb07-43104d7e577d.png)
+![image](https://user-images.githubusercontent.com/98988843/206115418-59e7bbef-047c-4785-a54a-ab002acb1aee.png)
+
+We have two suspensions, one is that different users have different rating habit, maybe one user likes to give higher ratings and only give rating to movie that he likes, then this user would be easy to predict. Another user might like to give ratings to all movie he watches, and give all movies ratings around six and seven, then his taste is hard to guess. My suggestion would be preprocessing the ratings for each user before feed into any classifier, like the method I used for MLP, label all movie with seven or higher as positive, else negative. The pre-process step changed result dramatically, I think a personalized data transformer would be necessary for a more accurate result. Another reason would be because our data is limited, in our features we have movie genres, run time, gross income, but we lack features such as actor, director, and most importantly overall score on the website, such as imdb rating or rotten tomato rating. In my opinion I think these would be great features to make a better result, but unlucky such suitable dataset doesn’t exist. During the project, our group truly feel the data processing step is equally if not more important than the training part. This include both data collection and processing two steps, they decide how the model will learn and develop.
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm
@@ -220,18 +231,6 @@ Nevertheless, there is one problem buried under it, although the silhouette coef
 
 Out speculation is that due to the nature of this data set(genres are not evenly distributed) and K-mean, when a movie only has two genres or fewer, it gets clustered with other movies with only one same genre. Our result reflects this too. The top three clusters are movies with drama, comedy, and thriller. When a movie consists of this and only another genre, it gets clustered with the three most giant clusters. We are still working on how to break these big clusters further apart. K-ProtoType might be one solution to this problem.
 
-### Results Discussion for user specific MLP, decition tree, Naive bayes:
-
-During the implementation of supervised learning with MLP, decision tree and naïve bayas. There are a lot of result worth discussing. In my previous opinion that result with higher rmse will result in lower accuracy, this is true for the most part. How ever since our movie recommendation system is predicting the score that viewer will give to the movie, the accuracy can not fully represent the result. So, my idea is to mark the rating with 7 or higher as liked movie, and 6 or lower as dislike. Then do the same thing for result, it turns out that even MLP with sgd as the solve has the higher rmse but comparing predict result and actual label. The accuracy is higher for MLP with sgd. Follow by it is Gaussian Naïve bayas and decision tree classification. Decision tree regressor has the lowest rmse but give a slightly worse result of 64.4% accuracy, MLP with sgd and fine-tuned hyperparameters can return a accuracy as high as 67.54%. To guess the reason behind it, I would say it is because when predicting, MLP guess the higher score very high and lower answer very lower, thus lead to this result. 
-
-![image](https://user-images.githubusercontent.com/98988843/206115362-eff7c9f6-bb76-4b71-9701-071163d38051.png)
-
-something worth notice is that when running supervised test on different users, the accuracy of all methods varies, for example, user one would have higher accuracy on all method than user two. 
-
-![image](https://user-images.githubusercontent.com/98988843/206115410-fba0b4c6-846e-42f9-bb07-43104d7e577d.png)
-![image](https://user-images.githubusercontent.com/98988843/206115418-59e7bbef-047c-4785-a54a-ab002acb1aee.png)
-
-We have two suspensions, one is that different users have different rating habit, maybe one user likes to give higher ratings and only give rating to movie that he likes, then this user would be easy to predict. Another user might like to give ratings to all movie he watches, and give all movies ratings around six and seven, then his taste is hard to guess. My suggestion would be preprocessing the ratings for each user before feed into any classifier, like the method I used for MLP, label all movie with seven or higher as positive, else negative. The pre-process step changed result dramatically, I think a personalized data transformer would be necessary for a more accurate result. Another reason would be because our data is limited, in our features we have movie genres, run time, gross income, but we lack features such as actor, director, and most importantly overall score on the website, such as imdb rating or rotten tomato rating. In my opinion I think these would be great features to make a better result, but unlucky such suitable dataset doesn’t exist. During the project, our group truly feel the data processing step is equally if not more important than the training part. This include both data collection and processing two steps, they decide how the model will learn and develop.
 
 ### result comparison
 

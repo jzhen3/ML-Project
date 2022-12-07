@@ -110,6 +110,16 @@ The top 10 movies for user 75 recommended by KNNBaseline:
 
 <img width="412" alt="knnbtop" src="https://user-images.githubusercontent.com/112134575/206164251-9ea7fc01-798c-4520-b67b-eca0f20d35a6.png">
 
+The recommendations by three models are to some extent similar. Galaxy Quest appears in all three recommendations, and Pandora's Box, The Thomas Crown Affair, and The Sixth Sense are in two recommendations. Moreover, most of these movies are sci-fi and thrill movies, clearly indicating the preference and taste of user 75. Nevertheless, We want to provide not just a broad top n recommendation, but rather a specific category the users may be interested. Our effort of clustering movies with unsupervised methods could be useful here. We select hierarchical clustering and set n_neighbor = 10, n_clusters = 175, and linkage = "ward". This parameter set generate the highest silhouette score from previous analysis. Next, the average ratings for each cluster are calculated and the cluster with highest average rating will be our recommendation. The cluster recommendation results are demonstrated below:
+
+SVD
+<img width="219" alt="svdc" src="https://user-images.githubusercontent.com/112134575/206166826-8eb2fe58-9159-4f9e-8235-7487b5e88ac6.png">
+
+SVD++
+<img width="374" alt="svdppc" src="https://user-images.githubusercontent.com/112134575/206166903-a8b627fb-4d6f-4e53-98a0-8824b89e4f94.png">
+
+KNNBaseline
+<img width="363" alt="knnbc" src="https://user-images.githubusercontent.com/112134575/206166926-afc4c972-af63-4877-a49d-aed0631c340b.png">
 
 
 

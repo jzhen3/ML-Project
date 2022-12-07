@@ -43,9 +43,8 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 ### Result Discussion for Supervised Methods:
 
 ### Results Discussion for Linear Regression:
-We use the linear regression method to do exploratory data analysis. In our case, the responding variable is the users' rating only. The predicting variables are revenue, budget, and genres. Genre is a categorical variable, so we transformed it into dummy variables. We use LinearRegression() in sklearn to train model and fit it. We get the following result: 1). MSE 1.10; 2). RMSE: 1.05 3). R-Square: 0.01.
-
-We build a correlation matrix to visiualize each feastures' association to predicting variables. Tope 10 features are: 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy', 'budget', 'revenue', 'Horror', 'Drama'. Within variables we used, we think that users prefer 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy' films, which is in line with our expectations since they are most well known and common films types. 
+We use the linear regression method to do exploratory data analysis. In our case, the responding variable is the users' rating only. The predicting variables are revenue, budget, and genres. Genre is a categorical variable, so we transformed it into dummy variables. We use LinearRegression() in sklearn to train the model and fit it. We get the following result: 1). MSE 1.10; 2). RMSE: 1.05 3). R-Square: 0.01.
+We build a correlation matrix to visualize each features association to predict variables. Top 10 features are: 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy', 'budget', 'revenue', 'Horror', and 'Drama'. Within the variables we used, we think that users prefer 'Animation', 'Action', 'Crime', 'War', 'Romance', and 'Comedy' films, which is in line with our expectations since they are the most well-known and common film types.
 ![Screenshot](images/CorrelationMatrix.png)
 
 ### Results Discussion for :

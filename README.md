@@ -1,4 +1,5 @@
 # CS7641-Final Report
+# Siyuan Chen, Dihong Huang, Zongzhen Lin, Jinsong Zhen
 ____________________________________________________________________________________________________________________________________
 # Dataset: 
 [1] https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json

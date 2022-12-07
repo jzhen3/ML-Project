@@ -42,7 +42,7 @@ Our group expect models with higher recall rate (0.7) because False negative ind
 ### Result Discussion for Supervised Methods:
 
 ### Results Discussion for Linear Regression:
-We use the linear regression method to do exploratory data analysis. In our case, the responding variable is the users' rating only. The predicting variables are revenue, budget, and genres. Genre is a categorical variable, so we transformed it into dummy variables. We use LinearRegression() in sklearn to train the model and fit it. We get the following result: 1). MSE 1.10; 2). RMSE: 1.05 3). R-Square: 0.01.
+We use the linear regression method to do exploratory data analysis. In our case, the responding variable is the users' rating only. The predicting variables are revenue, budget, and genres. Genre is a categorical variable, so we transformed it into dummy variables. We use LinearRegression() in sklearn to train the model and fit it. We get the following result: 1). MSE 1.10; 2). RMSE: 1.05 3). R-Square: 0.01. This R-square indicates only 1% of the variation of a dependent variable is explained by the predicting variables in the regression model. Such value is very low, which may be caused by unbalanced dataset. 
 
 We build a correlation matrix to visualize each features association to predict variables. Top 10 features are: 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy', 'budget', 'revenue', 'Horror', and 'Drama'. Within the variables we used, we think that users prefer 'Animation', 'Action', 'Crime', 'War', 'Romance', and 'Comedy' films, which is in line with our expectations since they are the most well-known and common film types.
 ![Screenshot](images/CorrelationMatrix.png)
@@ -245,7 +245,9 @@ https://clipchamp.com/watch/qPwhHl32ECc
 |Zongzhen Lin| lead and coordinated the group to achieve the midterm report; working on Introduction/Background, Problem Definition, Data collection, K-Prototype|
 
 # Google colab link:
-https://colab.research.google.com/drive/1ND2rVKghKa_gKwdv12XLEeUMcnL1qn5j?usp=sharing
+Midterm: https://colab.research.google.com/drive/1ND2rVKghKa_gKwdv12XLEeUMcnL1qn5j?usp=sharing
+
+Final Report: https://colab.research.google.com/drive/1a3CRvqI-JnnVVDKBvlYTG5_RdI7pbYjt?usp=sharing
 
 # References:
 [1] Roy, D., Dutta, M. A systematic review and research perspective on recommender systems. J Big Data 9, 59 (2022). https://doi.org/10.1186/s40537-022-00592-5

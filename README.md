@@ -67,7 +67,7 @@ we will choose one matrix to evaluate the models' performance
 1.	Silhouette Coefficient
 
 ### Results Discussion for Hierarchical Clustering Algorithm:
-Our group tested hierarchical clustering with all different settings, this includes four linkage type: ward, complete, average, and single linkage, and different connectivity constrains. Since we don’t have a true label for our data, so we runed silhouette coefficient to analysis the coherence of our clusters. In our testing, the linkage type ward performs the best with a silhouette coefficient around zero point five. It reaches the best performance around a hundred and ten clusters, within the same clusters movies often have two to three exactly same genres and similar runtime. below is an example cluster for silhouette coefficient around 0.5. [pictures from IMDB website]
+Our group tested hierarchical clustering with all different settings. This includes four linkage types: ward, complete, average, single linkage, and different connectivity constraints. Since we do not have a true label for our data, we ran a silhouette coefficient to analyze the coherence of our clusters. In our testing, the linkage type ward performs the best with a silhouette coefficient around zero point five. It reaches the best performance around a hundred and ten clusters. Movies often have two to three exactly the same genres and similar runtimes within the same clusters. Below is an example cluster for a silhouette coefficient around 0.5. [pictures from IMDB website]
 
 cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before Time III: The Time of the Great Giving', 'Alice in Wonderland', 'The Fox and the Hound', 'Aladdin and the King of Thieves',...]
 
@@ -76,7 +76,7 @@ number of movies in cluster 1: [193]
 ![
 ](images/alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
 
-an example with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way more movies in one cluster so we have more to recomend to the users.
+An example with a lower silhouette coefficient of around 0.2 is below. Movies with in the same cluster often only have one or two same genres, and the runtime varies by a lot. However, there are way more movies in one cluster, so we have more to recommend to the users.
 
 cluster 1: ['Screamers', 'Crumb', 'Judge Dredd', 'Species', 'Strange Days', 'Hoop Dreams', "Mary Shelley's Frankenstein", 'Outbreak', 'Jurassic Park',...]
 
@@ -113,7 +113,7 @@ mark up: <details>
            <p>linkge type is single, number of cluster from 10 to 200</p>
          </details>
 
-comparing all different kind of linkage types, ward minimized the sum of squared differences within all cluster, it is a variance-minimizing approach and provide best result among all four types of linkage. other types of linkage provide a small even negative silhouette coefficient which indicates some movies are in the wrong cluster, so for Hierarchical Clustering Algorithm we choose ward linkage to be the best solution for it.
+After comparing all different kinds of linkage types, we found out that ward minimized the sum of squared differences within all clusters. It is a variance-minimizing approach and provides clusters with the best result among all four types of linkage. Other types of linkage provide a small, even negative silhouette coefficient which indicates some movies are in the wrong cluster, so for the Hierarchical Clustering Algorithm, we choose ward linkage as the best solution.
 
 ### Results Discussion for K-ProtoType:
 

@@ -39,7 +39,7 @@ We choose several metrics to evaluate models’ performance. First, we will comp
 ### Potential Results Discussion for Supervised Methods:
 Our group expect models with higher recall rate (0.7) because False negative indicates that the recommendation system does not predict what clients like to watch. If the model achieves higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle to be close to the right angle so that the AUC is greater than 0.7. F1 score takes into account of both false positive and false negative.
 
-### Result Discussion for Supervised Methods:
+### Results Discussion for Supervised Methods:
 
 ### Results Discussion for Linear Regression:
 We use the linear regression method to do exploratory data analysis. In our case, the responding variable is the users' rating only. The predicting variables are revenue, budget, and genres. Genre is a categorical variable, so we transformed it into dummy variables. We use LinearRegression() in sklearn to train the model and fit it. We get the following result: 1). MSE 1.10; 2). RMSE: 1.05 3). R-Square: 0.01. This R-square indicates only 1% of the variation of a dependent variable is explained by the predicting variables in the regression model. Such value is very low, which may be caused by unbalanced dataset. 
@@ -48,55 +48,55 @@ We build a correlation matrix to visualize each features association to predict 
 ![Screenshot](images/CorrelationMatrix.png)
 
 ### Results Discussion for Naive Bayes:
-Naive Bayes is an appropriate application along with collaborative filtering to build recommendation systems to  predict whether the users would give good ratings on certain movies or not. Naive Bayes is an eager learning classifier and can be generative. It has fast learning speed and easy to predict rating based on user data sets. Some limitations of Naive Bayes include the assumptions of independent predictors. If this assumption doesn’t hold, the Naive Bayes can perform bad estimation. This method performs better in case of having categorical variables than having numerical variables. And for numerical variables, normal distribution is strongly assumed. To test the collinearity of our input data set, 
+Naive Bayes is an appropriate application along with collaborative filtering to build recommendation systems to predict whether the users would give good ratings on certain movies or not. Naive Bayes is an eager learning classifier and can be generative. It has fast learning speed and easy-to-predict ratings based on user data sets. Some limitations of Naive Bayes include the assumptions of independent predictors. If this assumption does not hold, the Naive Bayes can perform a bad estimation. This method performs better in the case of having categorical variables than numerical variables. Moreover, for numerical variables, the normal distribution is strongly assumed. To test the collinearity of our input data set, 
 We calculated the VIF to check:
 <img width="629" alt="VIF" src="https://user-images.githubusercontent.com/43261136/206167978-f8ed86cf-9b63-4ada-8a90-a06c51ac3754.png">
 
-Variance inflation factors for those three variables are all relatively small. Therefore, no multicollinearity exists for features and NB can be applied to our data set. 
+Variance inflation factors for those three variables are all relatively small. Therefore, no multicollinearity exists for features, and NB can be applied to our data set. 
 
-Knowing my input data set includes both categorical and continuous variables, we run Gaussian Naive Bayes because we have continuous variables associated with features like budget, revenue or duration that affect the movie ratings. I added the Bernoulli NB since there are many binary/discrete variables in my input data set and we compared the Bernoulli NB model performance on the test data set with the Gaussian NB.
+Knowing my input data set includes categorical and continuous variables, we run Gaussian Naive Bayes because we have continuous variables associated with features like budget, revenue, or duration that affect the movie ratings. I added the Bernoulli NB since there are many binary/discrete variables in the input data set. We compared the Bernoulli NB model performance on the test data set with the Gaussian NB.
 
-After running one Gaussian Naive Bayes model for each user, who leaves 50 ratings or more on different movies, we compute the RMSEs and accuracy scores and take the average of the total values of the model metrics from all the users. Our finding is that Bernoulli NB model performs better in movie ratings prediction considering the rating history of all the long-term users.
+After running one Gaussian Naive Bayes model for each user, who leaves 50 ratings or more on different movies, we compute the RMSEs and accuracy scores and take the average of the total values of the model metrics from all the users. Our finding is that the Bernoulli NB model performs better in movie rating prediction considering the rating history of all the long-term users.
 
 The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.141724
 
 The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.795371
 
 ### Results Discussion for for SVD and KNN:
-We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernal crash, we use rating_small.csv rather than the whole rating.csv which contains more than 27000000 ratings. The movie ratings are scaling from 1 to 5. The first algorithm is a simple SVD recommender adopted from HW3 Bonus. It mainly uses the singular value decomposition to factorize a user-movie rating matrix and then estimate the ratings of unrated movies, while the missing ratings in original data are filled with mean ratings of that specific movie to make sure SVD converge. There is only one hyperparameter to optomize: the number of latent factor k. Below is a sample prediction of the top 10 movies for a user with id 100, and k is 10:
+We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernel crashes, we use rating_small.csv rather than the whole rating.csv, which contains more than 27000000 ratings. The movie ratings are scaled from 1 to 5. The first algorithm is a simple SVD recommender adopted from HW3 Bonus. It mainly uses the singular value decomposition to factorize a user-movie rating matrix and then estimate the ratings of unrated movies, while the missing ratings in original data are filled with mean ratings of that specific movie to ensure SVD converges. There is only one hyperparameter to optimize: the number of latent factors k. Below is a sample prediction of the top 10 movies for a user with id 100 and k is 10:
 
 <img width="486" alt="simpletop" src="https://user-images.githubusercontent.com/112134575/206152239-7cc73b8a-bcc5-42ad-baec-ece1db40fef9.png">
 
-It is cleared that simply filling in mean ratings produces unrealistic estimation due to large amount of sparse data (little ratings available so small mean values). By tuning k, we can see that rmse is minimized at k = 15:
+It is cleared that simply filling in mean ratings produces unrealistic estimation due to a large amount of sparse data (little ratings available, so small mean values). By tuning k, we can see that RMSE is minimized at k = 15:
 
 <img width="431" alt="simplecv" src="https://user-images.githubusercontent.com/112134575/206153056-480244d2-d35a-40ef-bc77-ea450f794a1a.png">
 
-Since the rmse is quite high and there is not much thing we can do to improve the model performance, we decide to move to more sophisticated SVD implementation. 
+Since the RMSE is quite high and there are not many things we can do to improve the model performance, we decided to move to a more sophisticated SVD implementation. 
 
-We then apply the Surprose package, which provides several built-in recommendation models and useful tools for validation. The second algorithm is the famous SVD popularized by Simon Funk during the Netflix Prize. Instead of direct singular value decomposition, this SVD use a normal distribution to randomly initialized two matrices: the user-factor and the factor-movie matrices. In addition, stochastic gradient descent is implemented to optimized these matrices with regularization. To tune hyperparameters, We use a gridsearch cross validation to go through all combination of n_factors, n_epoch, lr_all, etc on a train set. Although, given the size of dataset and long computing time for cross validation, we are not able to try more exhaustic combinations. The best (lowest) rmse and the corresponding parameter set on a is shown below: 
+We then apply the Surprise package, which provides several built-in recommendation models and useful tools for validation. The second algorithm is the famous SVD popularized by Simon Funk during the Netflix Prize. Instead of direct singular value decomposition, this SVD uses a normal distribution to randomly initialize two matrices: the user-factor and the factor-movie matrices. In addition, stochastic gradient descent is implemented to optimize these matrices with regularization. To tune hyperparameters, We use grid-search cross-validation to go through all combinations of n_factors, n_epoch, lr_all, etc., on a train set. Although, given the size of the dataset and the long computing time for cross-validation, we are not able to try more exhaustive combinations. The best (lowest) RMSE and the corresponding parameter set on a is shown below: 
 
 <img width="919" alt="svd" src="https://user-images.githubusercontent.com/112134575/206155817-c2858b8b-97f1-4670-b363-4d13e51869fa.png">
 
-This set of parameters generates slightly better results than the simple SVD. Let's see how it does on the test set:
+This set of parameters generates slightly better results than the simple SVD. Let us see how it does on the test set:
 
 <img width="975" alt="svdcv" src="https://user-images.githubusercontent.com/112134575/206156615-19d2fa6a-3b06-46aa-9201-c8555c196e84.png">
 
-With a 10-fold cv, this best_svd produces a mean rmse of 0.9428, which is still better than the performance of simple SVD on train set (we didn't split the data when training the simple SVD).
+With a 10-fold cv, this best_svd produces a mean RMSE of 0.9428, which is still better than the performance of simple SVD on the train set (we did not split the data when training the simple SVD).
 
-The third algorithm is a extension of SVD - SVD++, which takes into account implicit ratings. An implicit rating here refers to the fact that a user rated a movie, regardless of the actual rating. SVD++ works the same as the last SVD and has the same parameters. Similarly, we use the gridsearch approach and cv on test set. The results are demonstrated below:
+The third algorithm is an extension of SVD - SVD++, which considers implicit ratings. An implicit rating here refers to the fact that a user rated a movie, regardless of the actual rating. SVD++ works the same as the last SVD and has the same parameters. Similarly, we use the grid-search approach and cv on the test set. The results are demonstrated below:
 
 <img width="789" alt="svdpp" src="https://user-images.githubusercontent.com/112134575/206159456-5d0d515d-f8a8-47b0-8575-2e010c6e5ecc.png">
 
 <img width="973" alt="svdppcv" src="https://user-images.githubusercontent.com/112134575/206159604-0f32cdcd-0f76-4e87-bc1f-908f72ec76b1.png">
 
-The third algorithm is KNNBaseline, a KNN-based model including baseline ratings. The main hyperparameters are max number of neighbor k, similarity measure, and baseline estimates. Same procedure of gridsearch and cv on test is applied here as well:
+The third algorithm is KNNBaseline, a KNN-based model including baseline ratings. The main hyperparameters are the max number of neighbor k, similarity measure, and baseline estimates. The same procedure of grid-search and cv on test is applied here as well:
 
 
 <img width="1075" alt="knn" src="https://user-images.githubusercontent.com/112134575/206160953-2d6872d5-4fec-46da-97df-ac4056da780c.png">
 
 <img width="966" alt="knncv" src="https://user-images.githubusercontent.com/112134575/206160999-854a4c11-8caa-472e-85e6-2c622b78c30d.png">
 
-In terms of train rmse, we can see that SVD++ is the best, then SVD, KNNBaseline, and simple SVD follow. While SVD++ doesn't significantly outperform SVD on test set -- with only a 0.0022 difference, KNNBaseline has much higher rmse on test that it actually underperforms SVD when generalizing to out of sample data. After such comparison, we implement several functions to see how the actual predictions of a specific user look like.
+In terms of training RMSE, we can see that SVD++ is the best, then SVD, KNNBaseline, and simple SVD follow. While SVD++ does not significantly outperform SVD on the test set -- with only a 0.0022 difference, KNNBaseline has a much higher RMSEon test that it actually underperforms SVD when generalizing to out-of-sample data. After such comparison, we implement several functions to see what the actual predictions of a specific user look like.
 
 We use the respective best parameter sets for SVD, SVD++, and KNNBaseline to create a prediction on a user with id 75. Movies are ranked based on estimated ratings. The top 10 movies for user 75 recommended by SVD are shown below:
 
@@ -110,7 +110,7 @@ The top 10 movies for user 75 recommended by KNNBaseline:
 
 <img width="412" alt="knnbtop" src="https://user-images.githubusercontent.com/112134575/206164251-9ea7fc01-798c-4520-b67b-eca0f20d35a6.png">
 
-The recommendations by three models are to some extent similar. Galaxy Quest appears in all three recommendations, and Pandora's Box, The Thomas Crown Affair, and The Sixth Sense are in two recommendations. Moreover, most of these movies are sci-fi and thrill movies, clearly indicating the preference and taste of user 75. Nevertheless, We want to provide not just a broad top n recommendation, but rather a specific category the users may be interested. Our effort of clustering movies with unsupervised methods could be useful here. We select hierarchical clustering and set n_neighbor = 10, n_clusters = 175, and linkage = "ward". This parameter set generate the highest silhouette score from previous analysis. Next, the average ratings for each cluster are calculated and the cluster with highest average rating will be our recommendation. The cluster recommendation results are demonstrated below:
+The recommendations of the three models are similar. Galaxy Quest appears in all three recommendations, and Pandora's Box, The Thomas Crown Affair, and The Sixth Sense are in two recommendations. Moreover, most of these movies are sci-fi and thrill movies, clearly indicating the preference and tastes of users 75. Nevertheless, We want to provide not just a broad top n recommendation but rather a specific category the users may be interested in. Our effort of clustering movies with unsupervised methods could be useful here. We select hierarchical clustering and set n_neighbor = 10, n_clusters = 175, and linkage = "ward". This parameter set generates the highest silhouette score from the previous analysis. Next, the average ratings for each cluster are calculated, and the cluster with the highest average rating will be our recommendation. The cluster recommendation results are demonstrated below:
 
 SVD
 
@@ -126,16 +126,16 @@ KNNBaseline
 
 ### Results Discussion for user specific MLP, decition tree, Naive bayes:
 
-During the implementation of supervised learning with MLP, decision tree and naïve bayas. There are a lot of result worth discussing. In my previous opinion that result with higher rmse will result in lower accuracy, this is true for the most part. How ever since our movie recommendation system is predicting the score that viewer will give to the movie, the accuracy can not fully represent the result. So, my idea is to mark the rating with 7 or higher as liked movie, and 6 or lower as dislike. Then do the same thing for result, it turns out that even MLP with sgd as the solve has the higher rmse but comparing predict result and actual label. The accuracy is higher for MLP with sgd. Follow by it is Gaussian Naïve bayas and decision tree classification. Decision tree regressor has the lowest rmse but give a slightly worse result of 64.4% accuracy, MLP with sgd and fine-tuned hyperparameters can return a accuracy as high as 67.54%. To guess the reason behind it, I would say it is because when predicting, MLP guess the higher score very high and lower answer very lower, thus lead to this result. 
+During the implementation of supervised learning with MLP, decision tree, and naïve bayas, there are a lot of results worth discussing. In my previous opinion, that result with higher RMSE will result in lower accuracy. This is true for the most part. However, since our movie recommendation system predicts the score viewers will give to the movie, the accuracy can not fully represent the result. So, my idea is to mark a rating of 7 or higher as the liked movie and 6 or lower as a dislike. Then do the same thing for a result. It turns out that even MLP with sgd as the solution has a higher RMSE but comparing predict the result and actual label. The accuracy is higher for MLP with sgd. Followed by it are Gaussian Naïve bayas and decision tree classification. Decision tree regressor has the lowest RMSE but give a slightly worse result of 64.4% accuracy. MLP with sgd and fine-tuned hyperparameters can return an accuracy as high as 67.54%. To guess the reason behind it, I would say it is because when predicting, MLP guesses the higher score very high and lower answer very lower, thus leading to this result. 
 
 ![image](https://user-images.githubusercontent.com/98988843/206115362-eff7c9f6-bb76-4b71-9701-071163d38051.png)
 
-something worth notice is that when running supervised test on different users, the accuracy of all methods varies, for example, user one would have higher accuracy on all method than user two. 
+Something worth noticing is that when running supervised tests on different users, the accuracy of all methods varies. For example, user one would have higher accuracy on all methods than user two. 
 
 ![image](https://user-images.githubusercontent.com/98988843/206115410-fba0b4c6-846e-42f9-bb07-43104d7e577d.png)
 ![image](https://user-images.githubusercontent.com/98988843/206115418-59e7bbef-047c-4785-a54a-ab002acb1aee.png)
 
-We have two suspensions, one is that different users have different rating habit, maybe one user likes to give higher ratings and only give rating to movie that he likes, then this user would be easy to predict. Another user might like to give ratings to all movie he watches, and give all movies ratings around six and seven, then his taste is hard to guess. My suggestion would be preprocessing the ratings for each user before feed into any classifier, like the method I used for MLP, label all movie with seven or higher as positive, else negative. The pre-process step changed result dramatically, I think a personalized data transformer would be necessary for a more accurate result. Another reason would be because our data is limited, in our features we have movie genres, run time, gross income, but we lack features such as actor, director, and most importantly overall score on the website, such as imdb rating or rotten tomato rating. In my opinion I think these would be great features to make a better result, but unlucky such suitable dataset doesn’t exist. During the project, our group truly feel the data processing step is equally if not more important than the training part. This include both data collection and processing two steps, they decide how the model will learn and develop.
+We have two suspensions. One is that different users have different rating habit, maybe one user likes to give higher ratings and only give a rating to the movie that he likes, then this user would be easy to predict. Another user might like to give ratings to all movies he watches, and give all movies ratings around six and seven, then his taste is hard to guess. I suggest preprocessing the ratings for each user before feeding them into any classifier, like the method I used for MLP, labeling all movies with seven or higher as positive, else negative. The preprocessing step changed the result dramatically. A personalized data transformer would be necessary for a more accurate result. Another reason would be that our data is limited. In our features, we have movie genres, run time, and gross income, but we lack features such as actor, director, and, most importantly, overall score on the website, such as IMDb rating or rotten tomato rating. I think these would be great features to make a better result, but unlucky, such a suitable dataset does not exist. During the project, our group feels the data processing step is equally, if not more important than the training part. This includes both data collection and processing in two steps. They decide how the model will learn and develop.
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm
@@ -163,7 +163,7 @@ number of movies in cluster 1: [193]
 ![
 ](images/alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
 
-An example with a lower silhouette coefficient of around 0.2 is below. Movies with in the same cluster often only have one or two same genres, and the runtime varies by a lot. However, there are way more movies in one cluster, so we have more to recommend to the users.
+An example with a lower silhouette coefficient of around 0.2 is below. Movies in the same cluster often only have one or two same genres, and the runtime varies by a lot. However, there are way more movies in one cluster, so we have more to recommend to the users.
 
 cluster 1: ['Screamers', 'Crumb', 'Judge Dredd', 'Species', 'Strange Days', 'Hoop Dreams', "Mary Shelley's Frankenstein", 'Outbreak', 'Jurassic Park',...]
 
@@ -200,7 +200,7 @@ mark up: <details>
            <p>linkge type is single, number of cluster from 10 to 200</p>
          </details>
 
-After comparing all different kinds of linkage types, we found out that ward minimized the sum of squared differences within all clusters. It is a variance-minimizing approach and provides clusters with the best result among all four types of linkage. Other types of linkage provide a small, even negative silhouette coefficient which indicates some movies are in the wrong cluster, so for the Hierarchical Clustering Algorithm, we choose ward linkage as the best solution.
+After comparing all different kinds of linkage types, we found out that ward minimized the sum of squared differences within all clusters. It is a variance-minimizing approach and provides clusters with the best result among all four linkage types. Other types of linkage provide a small, even negative silhouette coefficient which indicates some movies are in the wrong cluster. We choose ward linkage as the best solution for the Hierarchical Clustering Algorithm.
 
 ### Results Discussion for K-ProtoType:
 
@@ -237,7 +237,7 @@ Out speculation is that due to the nature of this data set(genres are not evenly
 ![image](https://user-images.githubusercontent.com/98988843/206168993-3eb56157-3c9b-4ad4-9139-dd4ba1eacf60.png)
 
 
-It is kind hard to compare supervised and unsupervised method in our cases, since for supervised method we have viewer’s rating to compare with our predict rating as performance parameter. But for unsupervised method they are clustered based on movie genres, even we have user rating as labels for movies, it cannot be used as true labels for clustering. Similarly for accuracy, since some of the data have been pre-processed, so the calculation of accuracy is based off different scale, however for RMSE we can calculate it first then set them to the same scale. For comparison, SVDpp has the best result, followed by SVD and KNN, linear regression and tree regressor have relatively low rmse as well. But as we discussed earlier, higher rmse doesn’t necessarily mean lower accuracy. So as the accuracy result, MLP with SGD as the solver can achieve 67.7% chance guess whether the viewer will like’s the show or not, in comparison categorical NB only have 58.2% accuracy. BernoulliNB can guess the correct user’s rating in 31.5% of the times in average cases.
+It is hard to compare supervised and unsupervised methods in our cases since we have the viewer’s rating to compare with our predicted rating as a performance parameter. However, for the unsupervised method, they are clustered based on movie genres, and even though we have user ratings as labels for movies, they cannot be used as true labels for clustering. Similarly, for accuracy, since some of the data have been pre-processed, so the calculation of accuracy is based on a different scale. However, for RMSE, we can calculate it first and then set them to the same scale. For comparison, SVDpp has the best result, followed by SVD, KNN, linear regression, and tree regressor have relatively low RMSE as well. But as we discussed earlier, higher RMSE does not necessarily mean lower accuracy. So as the accuracy result, MLP with SGD as the solver can achieve a 67.7% chance guess whether the viewer will like the show or not. In comparison, categorical NB only has 58.2% accuracy. BernoulliNB can guess the correct user’s rating 31.5% of the time in average cases.
 
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc

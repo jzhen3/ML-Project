@@ -63,7 +63,7 @@ The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.1
 The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.795371
 
 ### Results Discussion for for SVD and KNN:
-We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernal crash, we use rating_small.csv rather than the whole rating.csv which contains more than 27000000 ratings. The movie ratings are scaling from 1 to 5. The first algorithm is a simple SVD recommender adopted from HW3 Bonus. It mainly uses the singular value decomposition to factorize a user-movie rating matrix and then estimate the ratings of unrated movies, while the missing ratings in original data are filled with mean ratings of that specific movie to make sure svd converge. There is only one hyperparameter to optomize: the number of latent factor k. Below is a sample prediction of the top 10 movies for a user with id 100, and k is 10:
+We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernal crash, we use rating_small.csv rather than the whole rating.csv which contains more than 27000000 ratings. The movie ratings are scaling from 1 to 5. The first algorithm is a simple SVD recommender adopted from HW3 Bonus. It mainly uses the singular value decomposition to factorize a user-movie rating matrix and then estimate the ratings of unrated movies, while the missing ratings in original data are filled with mean ratings of that specific movie to make sure SVD converge. There is only one hyperparameter to optomize: the number of latent factor k. Below is a sample prediction of the top 10 movies for a user with id 100, and k is 10:
 
 <img width="486" alt="simpletop" src="https://user-images.githubusercontent.com/112134575/206152239-7cc73b8a-bcc5-42ad-baec-ece1db40fef9.png">
 
@@ -71,19 +71,19 @@ It is cleared that simply filling in mean ratings produces unrealistic estimatio
 
 <img width="431" alt="simplecv" src="https://user-images.githubusercontent.com/112134575/206153056-480244d2-d35a-40ef-bc77-ea450f794a1a.png">
 
-Since the rmse is quite high and there is not much thing we can do to improve the model performance, we decide to move to more sophisticated svd implementation. 
+Since the rmse is quite high and there is not much thing we can do to improve the model performance, we decide to move to more sophisticated SVD implementation. 
 
-We then apply the Surprose package, which provides several built-in recommendation models and useful tools for validation. The second algorithm is the famous svd popularized by Simon Funk during the Netflix Prize. Instead of direct singular value decomposition, this svd use a normal distribution to randomly initialized two matrices: the user-factor and the factor-movie matrices. In addition, stochastic gradient descent is implemented to optimized these matrices with regularization. To tune hyperparameters, We use a gridsearch cross validation to go through all combination of n_factors, n_epoch, lr_all, etc on a train set. Although, given the size of dataset and long computing time for cross validation, we are not able to try more exhaustic combinations. The best (lowest) rmse and the corresponding parameter set on a is shown below: 
+We then apply the Surprose package, which provides several built-in recommendation models and useful tools for validation. The second algorithm is the famous SVD popularized by Simon Funk during the Netflix Prize. Instead of direct singular value decomposition, this SVD use a normal distribution to randomly initialized two matrices: the user-factor and the factor-movie matrices. In addition, stochastic gradient descent is implemented to optimized these matrices with regularization. To tune hyperparameters, We use a gridsearch cross validation to go through all combination of n_factors, n_epoch, lr_all, etc on a train set. Although, given the size of dataset and long computing time for cross validation, we are not able to try more exhaustic combinations. The best (lowest) rmse and the corresponding parameter set on a is shown below: 
 
 <img width="919" alt="svd" src="https://user-images.githubusercontent.com/112134575/206155817-c2858b8b-97f1-4670-b363-4d13e51869fa.png">
 
-This set of parameters generates slightly better results than the simple svd. Let's see how it does on the test set:
+This set of parameters generates slightly better results than the simple SVD. Let's see how it does on the test set:
 
 <img width="975" alt="svdcv" src="https://user-images.githubusercontent.com/112134575/206156615-19d2fa6a-3b06-46aa-9201-c8555c196e84.png">
 
-With a 10-fold cv, this best_svd produces a mean rmse of 0.9428, which is still better than the performance of simple svd on train set (we didn't split the data when training the simple svd).
+With a 10-fold cv, this best_svd produces a mean rmse of 0.9428, which is still better than the performance of simple SVD on train set (we didn't split the data when training the simple SVD).
 
-The third algorithm is a extension of svd - svd++, which takes into account implicit ratings. An implicit rating here refers to the fact that a user rated a movie, regardless of the actual rating. svd++ works the same as the last svd and has the same parameters. Similarly, we use the gridsearch approach and cv on test set. The results are demonstrated below:
+The third algorithm is a extension of SVD - SVD++, which takes into account implicit ratings. An implicit rating here refers to the fact that a user rated a movie, regardless of the actual rating. SVD++ works the same as the last SVD and has the same parameters. Similarly, we use the gridsearch approach and cv on test set. The results are demonstrated below:
 
 <img width="789" alt="svdpp" src="https://user-images.githubusercontent.com/112134575/206159456-5d0d515d-f8a8-47b0-8575-2e010c6e5ecc.png">
 
@@ -96,7 +96,7 @@ The third algorithm is KNNBaseline, a KNN-based model including baseline ratings
 
 <img width="966" alt="knncv" src="https://user-images.githubusercontent.com/112134575/206160999-854a4c11-8caa-472e-85e6-2c622b78c30d.png">
 
-
+In terms of train rmse, we can see that SVD++ is the best, then SVD, KNNBaseline, and simple SVD follow. However, SVD++ doesn't significantly outperform SVD -- with only 0.002  
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

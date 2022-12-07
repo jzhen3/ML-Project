@@ -63,7 +63,9 @@ The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.1
 The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.795371
 
 ### Results Discussion for for SVD and KNN:
-We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernal crash, we use rating_small.csv rather than the whole rating.csv which contains more than 27000000 ratings. 
+We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernal crash, we use rating_small.csv rather than the whole rating.csv which contains more than 27000000 ratings. The first algorithm is a simple SVD recommender adopted from HW3 Bonus. It mainly uses the singular value decomposition to factorize a user-movie rating matrix and then estimate the ratings of unrated movies, while the missing ratings in original data are filled with mean ratings of that specific movie to make sure svd converge. There is only one hyperparameter to optomize: the number of latent factor k. Below is a sample prediction of the top 10 movies for a user with id 100, and k is 10:
+<img width="486" alt="simpletop" src="https://user-images.githubusercontent.com/112134575/206152239-7cc73b8a-bcc5-42ad-baec-ece1db40fef9.png">
+
 
 <img width="919" alt="Screen Shot 2022-12-07 at 4 40 18 AM" src="https://user-images.githubusercontent.com/112134575/206143764-4bbcca18-bb33-4ad1-a9e6-76efb6ad72d9.png">
 

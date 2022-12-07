@@ -40,7 +40,7 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 ### Result Discussion for Supervised Methods:
 
 ### Results Discussion for Linear Regression:
-![Screenshot](RateingCount.png)
+![Screenshot](images/RateingCount.png)
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm
@@ -65,7 +65,8 @@ cluster 1:['Balto', 'Pocahontas', 'James and the Giant Peach', 'The Land Before 
 
 number of movies in cluster 1: [193]
 
-![Screenshot](images/alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
+![
+](images/alice.png) ![Screenshot](images/land.png) ![Screenshot](images/balto.png) ![Screenshot](images/pocahontas.png)
 
 an example with lower silhouette coefficient around 0.2 is below, movies with in the same cluster often only have one or two same genre, and the runtime varies by alot. But there are way more movies in one cluster so we have more to recomend to the users.
 

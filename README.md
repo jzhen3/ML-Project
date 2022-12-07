@@ -117,32 +117,31 @@ After comparing all different kinds of linkage types, we found out that ward min
 
 ### Results Discussion for K-ProtoType:
 
-K-mean is used for numerical data, and k-mode is only suitable for categorical data types; in our case, we have mix types of data, so we used the K-protoType algorithm to do the clustering. This method is proposed by Huang, Z. (1997). 
+K-mean is used for numerical data, and k-mode is only suitable for categorical data types; in our case, we have mixed data types, so we used the K-protoType algorithm to do the clustering. Huang, Z. (1997) proposes this method. 
 
-We do not have completed results from K-ProtoType. This is because computational cost for using such method is too high. We executed for a week but still do not have much results. The only result is that cost=403.2974 given number of clusters = 100. The cost is defined as the sum of distance of all points to their respective cluster centrids.
-
+We still need to complete the results from K-ProtoType because the computational cost of using such a method is too high. We executed for a week but still needed more results. The only result is that cost=403.2974 given a number of clusters = 100. The cost is defined as the sum of the distance of all points to their respective cluster centroids.
 
 ### Results Discussion for DBSCAN:
 
-We use DBSCAN to identify clusters with varying shapes. Benefits of applying DBSCAN techniques doesn’t require having a predetermined set of clusters since it only looks at dense regions and it is flexible to identify clusters with different shapes and sizes within a data set. First, we need to optimize the two parameters: epsilon as the radius of each circle and MinPts as the minimum number of points to form a cluster. First, we need to find the optimal minimum points as a basis to find the best epsilon.For MinPts, we follow the general rule of thumb: if our movie set has more than two dimensions, the minimum points = 2 * number of dimensions (Sander et al., 1998) [6].
+We use DBSCAN to identify clusters with varying shapes. The benefits of applying DBSCAN techniques don't require having a predetermined set of clusters since it only looks at dense regions, and it is flexible in identifying clusters with different shapes and sizes within a data set. First, we need to optimize the two parameters: epsilon as the radius of each circle and MinPts as the minimum number of points to form a cluster. First, we need to find the optimal minimum points as a basis to find the best epsilon. For MinPts, we follow the general rule of thumb: if our movie set has more than two dimensions, the minimum points = 2 * number of dimensions (Sander et al., 1998) [6].
 
-For MinPts, we follow the general rule of thumb: if our movie set has more than two dimensions, the minimum points = 2 * number of dimensions (Sander et al., 1998). Thus, the optimal number of cluster is 33 * 2 = 66 for our movie data set. By producing a k-distance elbow plot, with y value as the computed average distance between each data point and x value as the number of neighbors, we find the point of maximum curvature as approximately 0.05. With a combination of MinPts = 66 and epsilon = 0.05, we use the sklearn DBSCAN function and find the optimal number of clusters as 97 and the number of noise points as 10076.
+For MinPts, we follow the general rule of thumb: if our movie set has more than two dimensions, the minimum points = 2 * number of dimensions (Sander et al., 1998). Thus, our movie data set's optimal number of clusters is 33 * 2 = 66. By producing a k-distance elbow plot, with the y value as the computed average distance between each data point and the x value as the number of neighbors, we find the point of maximum curvature as approximately 0.05. With a combination of MinPts = 66 and epsilon = 0.05, we use the sklearn DBSCAN function and find the optimal number of clusters as 97 and the number of noise points as 10076.
 
-Last but not least, we evaluate the DBSCAN with silhouette coefficient, which is bounded between -1 and 1. Higher score indicates the DBSCAN defines clusters with lower average intracluster distance and further intercluster distance from each other. The true cluster labels are unknown, we use the model itself to evaluate performance and it is appropriate to use the fit_predict() method to evaluate DBSCAN().
+Last, we evaluate the DBSCAN with a silhouette coefficient, which is bounded between -1 and 1. A higher score indicates the DBSCAN defines clusters with lower average intracluster distance and further intercluster distance from each other. The true cluster labels are unknown, we use the model itself to evaluate performance, and it is appropriate to use the fit_predict() method to evaluate DBSCAN().
 
 ### Results Discussion for K-mean:
 
-k-mean is a simple but popular unsupervised machine learning algorithms, as the first algorithm we learned in class we gave it a try as well. For K-mean, each observation belongs to the cluter wit hthe nearest mean, k-means clustering minimizes within-cluster vcariances, as the result, the k-mean algorithm returns a great coefficient.
+K-mean is a simple but popular unsupervised machine learning algorithm. As the first algorithm we learned in class, we also gave it a try. For K-mean, each observation belongs to the cluster with the nearest mean. K-means clustering minimizes within-cluster variance. As a result, the k-mean algorithm returns a great coefficient.
 
 ![Screenshot](images/kmean.png) 
 
-but there is one problem burried under it, although the silhouette coefficient is high, but the number of movies in each cluster is not evenly distributed compared to Hierarchical Clustering. 
+Nevertheless, there is one problem buried under it, although the silhouette coefficient is high, the number of movies in each cluster is not evenly distributed compared to Hierarchical Clustering. 
 
 ![Screenshot](images/number.png) 
 
 ![Screenshot](images/type.png) 
 
-Out speculation is that due to the nature of this data set(genres are not evenly distributed) and K-mean, when a movie only have two genres or less, it gets clustered with other movie with only one same genre, Our result reflect this too, the top three clusters are movies with drama, comedy and thriller, when a movie consist this genre and only another one genre, it gets clustered with three biggest clusters. we are still working on how to further break these big clusters apart, K-ProtoType might be one soulution to this problem.
+Out speculation is that due to the nature of this data set(genres are not evenly distributed) and K-mean, when a movie only has two genres or fewer, it gets clustered with other movies with only one same genre. Our result reflects this too. The top three clusters are movies with drama, comedy, and thriller. When a movie consists of this and only another genre, it gets clustered with the three most giant clusters. We are still working on how to break these big clusters further apart. K-ProtoType might be one solution to this problem.
 
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc

@@ -20,7 +20,14 @@ Currently we have two kinds of datasets, one consisting of user comments and the
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:
 1. Regression
-2. Tree-based method 
+2. Tree-based method
+##  Update Method we already tried
+1. Linear Regression
+2. Decision Tree
+3. MLP
+4. SVD
+5. KNN
+
 
 ### Matrix for Supervised Methods:
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score

@@ -48,7 +48,21 @@ We use the linear regression method to do exploratory data analysis. In our case
 We build a correlation matrix to visualize each features association to predict variables. Top 10 features are: 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy', 'budget', 'revenue', 'Horror', and 'Drama'. Within the variables we used, we think that users prefer 'Animation', 'Action', 'Crime', 'War', 'Romance', and 'Comedy' films, which is in line with our expectations since they are the most well-known and common film types.
 ![Screenshot](images/CorrelationMatrix.png)
 
-### Results Discussion for :
+### Results Discussion for Naive Bayes:
+Naive Bayes is an appropriate application along with collaborative filtering to build recommendation systems to  predict whether the users would give good ratings on certain movies or not. Naive Bayes is an eager learning classifier and can be generative. It has fast learning speed and easy to predict rating based on user data sets. Some limitations of Naive Bayes include the assumptions of independent predictors. If this assumption doesn’t hold, the Naive Bayes can perform bad estimation. This method performs better in case of having categorical variables than having numerical variables. And for numerical variables, normal distribution is strongly assumed. To test the collinearity of our input data set, 
+We calculated the VIF to check:
+<img width="741" alt="VIF" src="https://user-images.githubusercontent.com/43261136/206127827-a933794e-0a1d-4188-b215-4a49bc5d98f1.png">
+
+Variance inflation factors for those three variables are all relatively small. Therefore, no multicollinearity exists for features and NB can be applied to our data set. 
+
+Knowing my input data set includes both categorical and continuous variables, we run Gaussian Naive Bayes because we have continuous variables associated with features like budget, revenue or duration that affect the movie ratings. I added the Bernoulli NB since there are many binary/discrete variables in my input data set and we compared the Bernoulli NB model performance on the test data set with the Gaussian NB.
+
+After running one Gaussian Naive Bayes model for each user, who leaves 50 ratings or more on different movies, we compute the RMSEs and accuracy scores and take the average of the total values of the model metrics from all the users. Our finding is that Bernoulli NB model performs better in movie ratings prediction considering the rating history of all the long-term users.
+
+The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.141724
+
+The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.79537
+
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

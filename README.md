@@ -1,5 +1,4 @@
-# CS7641-Midterm Report
-Proposal for CS7641 project
+# CS7641-Final Report
 ____________________________________________________________________________________________________________________________________
 # Dataset: 
 [1] https://www.kaggle.com/datasets/ebiswas/imdb-review-dataset?select=sample.json
@@ -213,7 +212,7 @@ We use DBSCAN to identify clusters with varying shapes. The benefits of applying
 
 Thus, our movie data set's optimal number of minimum points is 2 * the number of dimensions = 33 * 2 = 66. By producing a k-distance elbow plot, with the y value as the computed average distance between each data point and the x value as the number of neighbors, we find the point of maximum curvature as approximately 0.05. With a combination of MinPts = 66 and epsilon = 0.05, we use the sklearn DBSCAN function and find the optimal number of clusters as 97 and the number of noise points as 10076.
 
-Last, we evaluate the DBSCAN with a silhouette coefficient, which is bounded between -1 and 1. A higher score indicates the DBSCAN defines clusters with lower average intracluster distance and further intercluster distance from each other. The true cluster labels are unknown, we use the model itself to evaluate performance, and it is appropriate to use the fit_predict() method to evaluate DBSCAN().
+Last, we evaluate the DBSCAN with a silhouette coefficient, which is bounded between -1 and 1. A higher score indicates the DBSCAN defines clusters with lower average intracluster distance and longer average intercluster distance from each other. The true cluster labels are unknown, we use the model itself to evaluate performance, and it is appropriate to use the fit_predict() method to evaluate DBSCAN().
 
 ### Results Discussion for K-mean:
 

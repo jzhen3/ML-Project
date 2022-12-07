@@ -233,6 +233,13 @@ something worth notice is that when running supervised test on different users, 
 
 We have two suspensions, one is that different users have different rating habit, maybe one user likes to give higher ratings and only give rating to movie that he likes, then this user would be easy to predict. Another user might like to give ratings to all movie he watches, and give all movies ratings around six and seven, then his taste is hard to guess. My suggestion would be preprocessing the ratings for each user before feed into any classifier, like the method I used for MLP, label all movie with seven or higher as positive, else negative. The pre-process step changed result dramatically, I think a personalized data transformer would be necessary for a more accurate result. Another reason would be because our data is limited, in our features we have movie genres, run time, gross income, but we lack features such as actor, director, and most importantly overall score on the website, such as imdb rating or rotten tomato rating. In my opinion I think these would be great features to make a better result, but unlucky such suitable dataset doesn’t exist. During the project, our group truly feel the data processing step is equally if not more important than the training part. This include both data collection and processing two steps, they decide how the model will learn and develop.
 
+### result comparison
+
+![image](https://user-images.githubusercontent.com/98988843/206168993-3eb56157-3c9b-4ad4-9139-dd4ba1eacf60.png)
+
+
+It is kind hard to compare supervised and unsupervised method in our cases, since for supervised method we have viewer’s rating to compare with our predict rating as performance parameter. But for unsupervised method they are clustered based on movie genres, even we have user rating as labels for movies, it cannot be used as true labels for clustering. Similarly for accuracy, since some of the data have been pre-processed, so the calculation of accuracy is based off different scale, however for RMSE we can calculate it first then set them to the same scale. For comparison, SVDpp has the best result, followed by SVD and KNN, linear regression and tree regressor have relatively low rmse as well. But as we discussed earlier, higher rmse doesn’t necessarily mean lower accuracy. So as the accuracy result, MLP with SGD as the solver can achieve 67.7% chance guess whether the viewer will like’s the show or not, in comparison categorical NB only have 58.2% accuracy. BernoulliNB can guess the correct user’s rating in 31.5% of the times in average cases.
+
 # Proposal Video link:
 https://clipchamp.com/watch/qPwhHl32ECc
 

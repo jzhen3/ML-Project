@@ -28,7 +28,6 @@ Currently we have two kinds of datasets, one consisting of user comments and the
 4. SVD
 5. KNN
 
-
 ### Matrix for Supervised Methods:
 We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and the calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
@@ -39,6 +38,8 @@ We use MSE, RMSE, Accuracy
 Our group expect models with higher recall rate (0.7) because False negative means that the recommendation system does not predict what clients like to watch. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score take into account of both false positive and false negative.
 
 ### Result Discussion for Supervised Methods:
+
+### Results Discussion for Linear Regression:
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

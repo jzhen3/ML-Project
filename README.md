@@ -38,7 +38,7 @@ We choose several matrixes to evaluate models’ performance. Firstly, we will c
 We use MSE, RMSE, Accuracy
 
 ### Potential Results Discussion for Supervised Methods:
-Our group expect models with higher recall rate (0.7) because False negative means that the recommendation system does not predict what clients like to watch. If the model can achieve higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle close to the right angle and the AUC is greater than 0.7. F1 score take into account of both false positive and false negative.
+Our group expect models with higher recall rate (0.7) because False negative indicates that the recommendation system does not predict what clients like to watch. If the model achieves higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle to be close to the right angle so that the AUC is greater than 0.7. F1 score takes into account of both false positive and false negative.
 
 ### Result Discussion for Supervised Methods:
 

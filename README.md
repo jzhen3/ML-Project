@@ -61,7 +61,7 @@ After running one Gaussian Naive Bayes model for each user, who leaves 50 rating
 
 The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.141724
 
-The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.79537
+The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.795371
 
 
 ## Unsupervised Methods:

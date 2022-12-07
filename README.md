@@ -40,6 +40,7 @@ Our group expect models with higher recall rate (0.7) because False negative mea
 ### Result Discussion for Supervised Methods:
 
 ### Results Discussion for Linear Regression:
+![Histogram for Ratings](D:/GT/GT-2022 Fall/CS 7641-Machine Learning/Project/RateingCount.png)
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

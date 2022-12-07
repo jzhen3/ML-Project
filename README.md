@@ -17,6 +17,9 @@ The goal of this project is to predict and recommend what films the user prefer 
 ## Data Collection:
 Currently we have two kinds of datasets, one consisting of user comments and their rating to different movies, second have details about each movie, this includes genre, run time, published years and actors, Etc. Since we are focusing on clustering, which is unsupervised learning first, so we mainly utilize the second dataset and trying to find similarity between movies. We remove datapoints that does not contain genre, since it is the main difference between movies and we expanded variable 'genre' into 32 dummy variables, 1 indicate the movie contain this genre. On dataset one, we are planning combine it to data set 2 based on the name of the file, so details about the film will still be the features and user rating will be the y to guide our model. For dataset one with user information, we isolated different users and planning do a model for everyone, but this requires one user to rate a lot of movies, but for the most of time, one user only comment on few movies, so we then want to utilize sparse matrix format and handcrafted features for a more general model after. 
 
+From the histogram, we observe that most of the rating concentrate between 3.0 to 4.0 on average. This means that most users tend to rate films relatively tolerant since they rarely give films extremely low scores. Of course, an extremely high score does not appear frequently. 
+![Screenshot](images/RateingCount.png)
+
 # Methods, Matrixes and Potential Results Discussion
 ## Supervised Method:
 1. Regression
@@ -44,9 +47,6 @@ We use the linear regression method to do exploratory data analysis. In our case
 
 We build a correlation matrix to visiualize each feastures' association to predicting variables. Tope 10 features are: 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy', 'budget', 'revenue', 'Horror', 'Drama'. Within variables we used, we think that users prefer 'Animation', 'Action', 'Crime', 'War', 'Romance', 'Comedy' films, which is in line with our expectations since they are most well known and common films types. 
 ![Screenshot](images/CorrelationMatrix.png)
-
-From the histogram, we observe that most of the rating concentrate between 3.0 to 4.0 on average. This means that most users tend to rate films relatively tolerant since they rarely give films extremely low scores. Of course, an extremely high score does not appear frequently. 
-![Screenshot](images/RateingCount.png)
 
 ### Results Discussion for :
 

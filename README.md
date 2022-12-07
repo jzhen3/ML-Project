@@ -32,11 +32,9 @@ From the histogram, we observe that most of the rating concentrate between 3.0 t
 4. SVD
 5. KNN
 
-### Matrix for Supervised Methods:
-We choose several matrixes to evaluate models’ performance. Firstly, we will compute the confusion matrix and then calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
+### Metrics for Supervised Methods:
+We choose several metrics to evaluate models’ performance. First, we will compute the model rmse for most methods we plan to implement; we will also construct the confusion matrix and then calculate precision and recall rate as well as graphing of ROC AUC. Secondly, we will use some additional matrix to assist to evaluate models, such as the F-beta score
 
-## Update
-We use MSE, RMSE, Accuracy
 
 ### Potential Results Discussion for Supervised Methods:
 Our group expect models with higher recall rate (0.7) because False negative indicates that the recommendation system does not predict what clients like to watch. If the model achieves higher recall rate, we can accept relatively lower precision rate (0.6). Secondly, we expect a ROC graph’s angle to be close to the right angle so that the AUC is greater than 0.7. F1 score takes into account of both false positive and false negative.
@@ -64,6 +62,10 @@ The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.1
 
 The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.795371
 
+### Results Discussion for for SVD and KNN:
+
+
+<img width="919" alt="Screen Shot 2022-12-07 at 4 40 18 AM" src="https://user-images.githubusercontent.com/112134575/206143764-4bbcca18-bb33-4ad1-a9e6-76efb6ad72d9.png">
 
 ## Unsupervised Methods:
 1. Hierarchical Clustering Algorithm

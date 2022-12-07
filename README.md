@@ -63,7 +63,7 @@ The result of the Bernoulli NB model performance: Accuracy: 0.401499, RMSE:  1.1
 The result of the Gaussian NB model performance: Accuracy: 0.182912, RMSE: 1.795371
 
 ### Results Discussion for for SVD and KNN:
-
+We implement multiple variations of the matrix factorization-based algorithms, or SVD, to compare their performance on the same dataset. In order to reduce runtime and avoid kernal crash, we use rating_small.csv rather than the whole rating.csv which contains more than 27000000 ratings. 
 
 <img width="919" alt="Screen Shot 2022-12-07 at 4 40 18 AM" src="https://user-images.githubusercontent.com/112134575/206143764-4bbcca18-bb33-4ad1-a9e6-76efb6ad72d9.png">
 

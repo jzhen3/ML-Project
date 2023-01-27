@@ -226,7 +226,7 @@ Nevertheless, there is one problem buried under it, although the silhouette coef
 
 ![Screenshot](images/type.png) 
 
-Out speculation is that due to the nature of this data set(genres are not evenly distributed) and K-mean, when a movie only has two genres or fewer, it gets clustered with other movies with only one same genre. Our result reflects this too. The top three clusters are movies with drama, comedy, and thriller. When a movie consists of this and only another genre, it gets clustered with the three most giant clusters. We are still working on how to break these big clusters further apart. K-ProtoType might be one solution to this problem.
+Our speculation is that due to the nature of this data set(genres are not evenly distributed) and K-mean, when a movie only has two genres or fewer, it gets clustered with other movies with only one same genre. Our result reflects this too. The top three clusters are movies with drama, comedy, and thriller. When a movie consists of this and only another genre, it gets clustered with the three most giant clusters. We are still working on how to break these big clusters further apart. K-ProtoType might be one solution to this problem.
 
 
 ### result comparison
